@@ -34,13 +34,17 @@ upgrade: ## Upgrades project dependencies to their latest version (works only if
 
 # Serve and build-prod
 
-.PHONY: serve
-serve: node_modules #main# Run the application using webpack-dev-server (hit CTRL+c to stop the server)
-	@yarn serve
+.PHONY: dev
+dev: node_modules #main# Run the application using ViteJS dev server
+	@yarn dev
 
 .PHONY: build
 build: node_modules #main# Build the production artifacts
-	@yarn build
+	@yarn builddev
+
+.PHONY: serve
+serve: node_modules #main# Preview the production build
+	@yarn serve
 
 # Tests
 
@@ -54,5 +58,5 @@ tests: node_modules #main# Execute all the tests
 	@make stylelint
 
 .PHONY: stylelint
-stylelint: ## Lint the LESS code
+stylelint: ## Lint the CSS code
 	@yarn run -s stylelint
