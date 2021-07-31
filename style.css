@@ -1,18 +1,69 @@
-main {
+html {
+  background-color: lightgray;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin: 0 auto;
+  min-height: 100%;
 }
 
-.Aligner {
-  display: flex;
+main {
   align-items: center;
-  min-height: 24em;
-  justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.Aligner-item {
-  flex: none;
+.photo > img {
+  border-radius: 50%;
+  width: 320px;
+}
+
+.intro {
+  color: darkslategray;
+}
+
+.intro > div {
+  padding: 5px 0;
+}
+
+.hello {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.about-me {
+  font-size: x-large;
+}
+
+footer {
+  align-items: center;
+  background-color: whitesmoke;
+  display: flex;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.copyright {
+  font-size: large;
+  color: dimgray;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.links img {
+  padding: 0 10px;
+  height: 32px;
 }
