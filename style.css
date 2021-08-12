@@ -22,13 +22,33 @@ main {
   justify-content: space-evenly;
 }
 
+@media (max-width: 1023px) {
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .photo > img {
   border-radius: 50%;
   width: 320px;
 }
 
+@media (max-width: 1023px) {
+  .photo > img {
+    width: 256px;
+  }
+}
+
 .intro {
   color: darkslategray;
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    margin-top: 50px;
+  }
 }
 
 .intro > div {
@@ -54,16 +74,29 @@ footer {
   padding: 20px 50px;
 }
 
-.copyright {
-  font-size: large;
-  color: dimgray;
+@media (max-width: 1023px) {
+  footer {
+    padding: 10px;
+  }
 }
 
 footer a {
   text-decoration: none;
 }
 
+.copyright {
+  font-size: large;
+  color: dimgray;
+}
+
 .links img {
   padding: 0 10px;
   height: 32px;
+}
+
+@media (max-width: 1023px) {
+  .links img {
+    padding: 0 2px;
+    height: 24px;
+  }
 }
