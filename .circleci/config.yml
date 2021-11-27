@@ -29,6 +29,9 @@ jobs:
       - run:
           name: Lint CSS/LESS code
           command: make stylelint
+      - run:
+          name: Lint JS code
+          command: make eslint
 
 workflows:
   pull_request:

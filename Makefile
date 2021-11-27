@@ -56,7 +56,18 @@ tests: node_modules #main# Execute all the tests
 	@echo "|----------------------|"
 	@echo ""
 	@make stylelint
+	@echo ""
+	@echo "|------------------|"
+	@echo "| Lint the JS code |"
+	@echo "|------------------|"
+	@echo ""
+	@make eslint
 
 .PHONY: stylelint
 stylelint: ## Lint the CSS code
 	@yarn run -s stylelint
+
+.PHONY: eslint
+eslint: ## Lint the TypeScript code.
+	@yarn -s eslint
+
