@@ -9,18 +9,18 @@
     "stylelint": "stylelint '**/*.{css,html}'"
   },
   "devDependencies": {
-    "eslint": "^8.15.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "postcss-html": "^1.4.1",
-    "prettier": "^2.6.2",
-    "stylelint": "^14.8.2",
-    "stylelint-config-html": "^1.0.0",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-html": "^1.1.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^25.0.0",
-    "vite": "^2.9.8"
+    "stylelint-config-standard": "^26.0.0",
+    "vite": "^3.0.2"
   }
 }
