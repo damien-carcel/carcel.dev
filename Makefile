@@ -27,8 +27,8 @@ node_modules: yarn.lock
 .PHONY: install
 install: node_modules ## Install project dependencies
 
-.PHONY: upgrade
-upgrade: ## Upgrades project dependencies to their latest version (works only if project dependencies were installed at least once)
+.PHONY: update
+update: ## Updates project dependencies to their latest version (works only if project dependencies were installed at least once)
 	@yarn upgrade-interactive --latest
 	@yarn upgrade
 
