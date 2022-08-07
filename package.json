@@ -1,26 +1,36 @@
 {
-  "name": "carcel.dev",
   "private": true,
+  "sideEffects": false,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "eslint": "eslint '**/*.js'",
-    "stylelint": "stylelint '**/*.{css,html}'"
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "cross-env NODE_ENV=production netlify dev",
+    "eslint": "eslint '**/*.{ts,tsx}'",
+    "prettier": "prettier '**/*.{ts,tsx}'",
+    "stylelint": "stylelint '**/*.css'"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "@remix-run/netlify": "^1.6.7",
+    "@remix-run/node": "^1.6.7",
+    "@remix-run/react": "^1.6.7",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@remix-run/dev": "^1.6.7",
+    "@remix-run/eslint-config": "^1.6.7",
+    "@remix-run/serve": "^1.6.7",
+    "@types/react": "^17.0.47",
+    "@types/react-dom": "^17.0.17",
     "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "postcss-html": "^1.5.0",
-    "prettier": "^2.7.1",
     "stylelint": "^14.9.1",
-    "stylelint-config-html": "^1.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^26.0.0",
-    "vite": "^3.0.2"
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

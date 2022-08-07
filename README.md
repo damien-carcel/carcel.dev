@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- Yarn
+- NodeJS latest LTS
+- NPM 8
 - Make
 
 ## How to use it?
