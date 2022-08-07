@@ -27,10 +27,13 @@ jobs:
           paths:
             - ~/.cache/yarn
       - run:
-          name: Lint CSS/LESS code
+          name: Lint the stylesheets
           command: make stylelint
       - run:
-          name: Lint JS code
+          name: Check the code style
+          command: make prettier
+      - run:
+          name: Lint the TS code
           command: make eslint
 
 workflows:

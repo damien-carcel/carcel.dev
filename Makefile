@@ -40,11 +40,11 @@ dev: node_modules #main# Run the application using ViteJS dev server
 
 .PHONY: build
 build: node_modules #main# Build the production artifacts
-	@yarn builddev
+	@yarn build
 
-.PHONY: serve
-serve: node_modules #main# Preview the production build
-	@yarn serve
+.PHONY: start
+start: node_modules #main# Preview the production build
+	@yarn start
 
 # Tests
 
@@ -57,17 +57,30 @@ tests: node_modules #main# Execute all the tests
 	@echo ""
 	@make stylelint
 	@echo ""
+	@echo "|----------------------|"
+	@echo "| Check the code style |"
+	@echo "|----------------------|"
+	@echo ""
+	@make prettier CI=true
+	@echo ""
 	@echo "|------------------|"
-	@echo "| Lint the JS code |"
+	@echo "| Lint the TS code |"
 	@echo "|------------------|"
 	@echo ""
 	@make eslint
 
 .PHONY: stylelint
 stylelint: ## Lint the CSS code
-	@yarn run -s stylelint
+	@yarn stylelint
+
+.PHONY: prettier
+prettier: ## Check the code style. Only warn when run on the CI, apply the needed changes when run locally.
+ifeq ($(CI),true)
+	@yarn prettier --check
+else
+	@yarn prettier --write
+endif
 
 .PHONY: eslint
 eslint: ## Lint the TypeScript code.
-	@yarn -s eslint
-
+	@yarn eslint
