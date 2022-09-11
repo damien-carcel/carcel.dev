@@ -3,7 +3,7 @@ SHELL = bash
 ifeq ($(CI),true)
 	YARN = yarn
 else
-	YARN = docker compose run --rm node yarn
+	YARN = docker compose run --rm --service-ports node yarn
 endif
 
 .PHONY: help
