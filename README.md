@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- Yarn
+- Docker 20.10
+- Docker Compose v2
 - Make
 
 ## How to use it?

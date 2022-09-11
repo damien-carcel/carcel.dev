@@ -1,5 +1,11 @@
 SHELL = bash
 
+ifeq ($(CI),true)
+	YARN = yarn
+else
+	YARN = docker compose run --rm node yarn
+endif
+
 .PHONY: help
 help:
 	@echo "-----------------"
@@ -19,37 +25,37 @@ help:
 # Application dependencies
 
 yarn.lock: package.json
-	@yarn install
+	@$(YARN) install
 
 node_modules: yarn.lock
-	@yarn install --frozen-lockfile --check-files
+	@$(YARN) install --frozen-lockfile --check-files
 
 .PHONY: install
-install: node_modules ## Install project dependencies
+install: node_modules ## Install project dependencies.
 
 .PHONY: update
-update: ## Updates project dependencies to their latest version (works only if project dependencies were installed at least once)
-	@yarn upgrade-interactive --latest
-	@yarn upgrade
+update: ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
+	@$(YARN) upgrade-interactive --latest
+	@$(YARN) upgrade
 
 # Serve and build-prod
 
 .PHONY: dev
-dev: node_modules #main# Run the application using ViteJS dev server
-	@yarn dev
+dev: node_modules #main# Run the application using ViteJS dev server.
+	@$(YARN) dev
 
 .PHONY: build
-build: node_modules #main# Build the production artifacts
-	@yarn build
+build: node_modules #main# Build the production artifacts.
+	@$(YARN) build
 
 .PHONY: start
-start: node_modules #main# Preview the production build
-	@yarn start
+start: node_modules #main# Preview the production build.
+	@$(YARN) start
 
 # Tests
 
 .PHONY: tests
-tests: node_modules #main# Execute all the tests
+tests: node_modules #main# Execute all the tests.
 	@echo ""
 	@echo "|----------------------|"
 	@echo "| Lint the stylesheets |"
@@ -70,17 +76,17 @@ tests: node_modules #main# Execute all the tests
 	@make eslint
 
 .PHONY: stylelint
-stylelint: ## Lint the CSS code
-	@yarn stylelint
+stylelint: ## Lint the CSS code.
+	@$(YARN) stylelint
 
 .PHONY: prettier
 prettier: ## Check the code style. Only warn when run on the CI, apply the needed changes when run locally.
 ifeq ($(CI),true)
-	@yarn prettier --check
+	@$(YARN) prettier --check
 else
-	@yarn prettier --write
+	@$(YARN) prettier --write
 endif
 
 .PHONY: eslint
 eslint: ## Lint the TypeScript code.
-	@yarn eslint
+	@$(YARN) eslint
