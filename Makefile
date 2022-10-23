@@ -67,7 +67,7 @@ tests: node_modules #main# Execute all the tests.
 	@echo "| Check the code style |"
 	@echo "|----------------------|"
 	@echo ""
-	@make prettier CI=true
+	@make prettier
 	@echo ""
 	@echo "|------------------|"
 	@echo "| Lint the TS code |"
@@ -80,12 +80,12 @@ stylelint: ## Lint the CSS code.
 	@$(YARN) stylelint
 
 .PHONY: prettier
-prettier: ## Check the code style. Only warn when run on the CI, apply the needed changes when run locally.
-ifeq ($(CI),true)
+prettier: ## Check the code style.
 	@$(YARN) prettier --check
-else
+
+.PHONY: fix-prettier
+fix-prettier: ## Fix the code style.
 	@$(YARN) prettier --write
-endif
 
 .PHONY: eslint
 eslint: ## Lint the TypeScript code.
