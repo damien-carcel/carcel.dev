@@ -24,38 +24,39 @@ help:
 
 # Application dependencies
 
-yarn.lock: package.json
-	@$(YARN) install
-
-node_modules: yarn.lock
-	@$(YARN) install --frozen-lockfile --check-files
-
 .PHONY: install
-install: node_modules ## Install project dependencies.
+install: ## Install project dependencies.
+ifeq ($(wildcard yarn.lock),)
+	@echo "Install the Node modules according to package.json"
+	@$(YARN) install
+else
+	@echo "Install the Node modules according to yarn.lock"
+	@$(YARN) install --frozen-lockfile --check-files
+endif
 
-.PHONY: update
-update: ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
+.PHONY: upgrade
+upgrade: ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
 	@$(YARN) upgrade-interactive --latest
 	@$(YARN) upgrade
 
 # Serve and build-prod
 
 .PHONY: dev
-dev: node_modules #main# Run the application using ViteJS dev server.
+dev: install #main# Run the application using ViteJS dev server.
 	@$(YARN) dev
 
-.PHONY: build
-build: node_modules #main# Build the production artifacts.
-	@$(YARN) build
-
-.PHONY: start
-start: node_modules #main# Preview the production build.
+.PHONY: prod
+prod: install #main# Preview the production build.
 	@$(YARN) start
+
+.PHONY: build
+build: install #main# Build the production artifacts.
+	@$(YARN) build
 
 # Tests
 
 .PHONY: tests
-tests: node_modules #main# Execute all the tests.
+tests: install #main# Execute all the tests.
 	@echo ""
 	@echo "|----------------------|"
 	@echo "| Lint the stylesheets |"
