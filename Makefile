@@ -36,6 +36,7 @@ endif
 
 .PHONY: upgrade
 upgrade: ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
+	@$(YARN) upgrade
 	@$(YARN) upgrade-interactive --latest
 	@$(YARN) upgrade
 
