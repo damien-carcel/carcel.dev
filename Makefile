@@ -24,8 +24,20 @@ help:
 
 # Application dependencies
 
+~/.yarnrc:
+	touch ~/.yarnrc
+
+~/.config/yarn:
+	mkdir -p ~/.config/yarn
+
+~/.cache/yarn:
+	mkdir -p ~/.cache/yarn
+
+.PHONY: yarn-config-and-cache
+yarn-config-and-cache: ~/.yarnrc ~/.config/yarn ~/.cache/yarn
+
 .PHONY: install
-install: ## Install project dependencies.
+install: yarn-config-and-cache ## Install project dependencies.
 ifeq ($(wildcard yarn.lock),)
 	@echo "Install the Node modules according to package.json"
 	@$(YARN) install
@@ -35,7 +47,7 @@ else
 endif
 
 .PHONY: upgrade
-upgrade: ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
+upgrade: yarn-config-and-cache ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
 	@$(YARN) upgrade
 	@$(YARN) upgrade-interactive --latest
 	@$(YARN) upgrade
