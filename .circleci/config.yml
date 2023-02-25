@@ -1,45 +1,42 @@
 version: 2.1
 
 jobs:
-    tests:
-        docker:
-            -   image: node:lts
-        steps:
-            - checkout
-            -   run:
-                    name: Create cache and configuration directories for the client dependencies
-                    command: |
-                        touch ~/.yarnrc
-                        mkdir ~/.yarn
-                        mkdir -p ~/.cache/yarn
-            -   restore_cache:
-                    keys:
-                        - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                        - yarn-{{ .Environment.CACHE_VERSION }}-
-            -   run:
-                    name: Install dependencies
-                    command: make install
-            -   save_cache:
-                    key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                    paths:
-                        - ~/.cache/yarn
-            -   run:
-                    name: Lint the stylesheets
-                    command: make stylelint
-            -   run:
-                    name: Check the code style
-                    command: make prettier
-            -   run:
-                    name: Lint the TS code
-                    command: make eslint
+  tests:
+    docker:
+      - image: node:lts
+    steps:
+      - checkout
+      - run:
+          name: Create cache and configuration directories for the client dependencies
+          command: make yarn-config-and-cache
+      - restore_cache:
+          keys:
+            - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.CACHE_VERSION }}-
+      - run:
+          name: Install dependencies
+          command: make install
+      - save_cache:
+          key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Lint the stylesheets
+          command: make stylelint
+      - run:
+          name: Check the code style
+          command: make prettier
+      - run:
+          name: Lint the TS code
+          command: make eslint
 
 workflows:
-    pull_request:
-        jobs:
-            -   tests:
-                    context:
-                        - docker-hub-credentials
-                    filters:
-                        branches:
-                            ignore:
-                                - main
+  pull_request:
+    jobs:
+      - tests:
+          context:
+            - docker-hub-credentials
+          filters:
+            branches:
+              ignore:
+                - main
