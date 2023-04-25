@@ -93,6 +93,10 @@ tests: install #main# Execute all the tests.
 stylelint: ## Lint the CSS code.
 	@$(YARN) stylelint
 
+.PHONY: fix-stylelint
+fix-stylelint: ## Lint the CSS code.
+	@$(YARN) stylelint --fix
+
 .PHONY: prettier
 prettier: ## Check the code style.
 	@$(YARN) prettier --check
