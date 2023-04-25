@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   tests:
     docker:
-      - image: node:lts
+      - image: node:18
     steps:
       - checkout
       - run:
