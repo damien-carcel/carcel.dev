@@ -36,8 +36,14 @@ help:
 .PHONY: yarn-config-and-cache
 yarn-config-and-cache: ~/.yarnrc ~/.config/yarn ~/.cache/yarn
 
+.PHONY: pull
+pull: ## Pull all Docker images.
+ifneq ($(CI),true)
+	docker compose pull
+endif
+
 .PHONY: install
-install: yarn-config-and-cache ## Install project dependencies.
+install: yarn-config-and-cache pull ## Install project dependencies.
 ifeq ($(wildcard yarn.lock),)
 	@echo "Install the Node modules according to package.json"
 	@$(YARN) install
@@ -47,7 +53,7 @@ else
 endif
 
 .PHONY: upgrade
-upgrade: yarn-config-and-cache ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
+upgrade: yarn-config-and-cache pull ## Updates project dependencies to their latest version (works only if project dependencies were already installed).
 	@$(YARN) upgrade
 	@$(YARN) upgrade-interactive --latest
 	@$(YARN) upgrade
@@ -55,21 +61,21 @@ upgrade: yarn-config-and-cache ## Updates project dependencies to their latest v
 # Serve and build-prod
 
 .PHONY: dev
-dev: install #main# Run the application using ViteJS dev server.
+dev: pull install #main# Run the application using ViteJS dev server.
 	@$(YARN) dev
 
 .PHONY: prod
-prod: install #main# Preview the production build.
+prod: pull install #main# Preview the production build.
 	@$(YARN) start
 
 .PHONY: build
-build: install #main# Build the production artifacts.
+build: pull install #main# Build the production artifacts.
 	@$(YARN) build
 
 # Tests
 
 .PHONY: tests
-tests: install #main# Execute all the tests.
+tests: pull install #main# Execute all the tests.
 	@echo ""
 	@echo "|----------------------|"
 	@echo "| Lint the stylesheets |"
@@ -94,7 +100,7 @@ stylelint: ## Lint the CSS code.
 	@$(YARN) stylelint
 
 .PHONY: fix-stylelint
-fix-stylelint: ## Lint the CSS code.
+fix-stylelint: ## Fix the CSS code style.
 	@$(YARN) stylelint --fix
 
 .PHONY: prettier
