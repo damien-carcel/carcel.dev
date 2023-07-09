@@ -2,14 +2,14 @@
 
 ## Requirements
 
-- Docker 20.10
+- Docker 20.10 and more recent
 - Docker Compose v2
-- Make
+- [Task](https://taskfile.dev/)
 
 ## How to use it?
 
 ```bash
-$ make
+$ task
 ```
 
 ## License

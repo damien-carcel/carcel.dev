@@ -1,35 +1,5 @@
 version: 2.1
 
-jobs:
-  tests:
-    docker:
-      - image: node:18
-    steps:
-      - checkout
-      - run:
-          name: Create cache and configuration directories for the client dependencies
-          command: make yarn-config-and-cache
-      - restore_cache:
-          keys:
-            - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-{{ .Environment.CACHE_VERSION }}-
-      - run:
-          name: Install dependencies
-          command: make install
-      - save_cache:
-          key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run:
-          name: Lint the stylesheets
-          command: make stylelint
-      - run:
-          name: Check the code style
-          command: make prettier
-      - run:
-          name: Lint the TS code
-          command: make eslint
-
 workflows:
   pull_request:
     jobs:
@@ -40,3 +10,40 @@ workflows:
             branches:
               ignore:
                 - main
+
+jobs:
+  tests:
+    machine:
+      image: ubuntu-2204:2023.04.2
+    steps:
+      - checkout
+      - run:
+          name: Install the latest Task binary
+          command: npm install -g @go-task/cli
+      - run:
+          name: Define HOST_USER_IDS environment variable
+          command: |
+            echo "export HOST_USER_IDS=$(id -u):$(id -g)" >> "$BASH_ENV"
+      - run:
+          name: Create cache and configuration directories for the client dependencies
+          command: task setup:yarn
+      - restore_cache:
+          keys:
+            - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.CACHE_VERSION }}-
+      - run:
+          name: Install dependencies
+          command: task dependencies:install
+      - save_cache:
+          key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Lint the stylesheets
+          command: task tests:stylelint
+      - run:
+          name: Check the code style
+          command: task tests:prettier
+      - run:
+          name: Lint the TS code
+          command: task tests:eslint

@@ -3,6 +3,12 @@ import linkedin from '../images/linkedin.png';
 import octocat from '../images/octocat.png';
 import twitter from '../images/twitter.png';
 
+import type { V2_MetaFunction } from '@remix-run/node';
+
+export const meta: V2_MetaFunction = () => {
+    return [{ title: "Hello, I'm Damien" }, { name: 'description', content: 'Welcome to my personal page!' }];
+};
+
 export default function Index() {
     return (
         <>
