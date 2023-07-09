@@ -17,7 +17,13 @@ jobs:
       image: ubuntu-2204:2023.04.2
     steps:
       - checkout
-      - install_task
+      - run:
+          name: Install the latest Task binary
+          command: npm install -g @go-task/cli
+      - run:
+          name: Define HOST_USER_IDS environment variable
+          command: |
+            echo "export HOST_USER_IDS=$(id -u):$(id -g)" >> "$BASH_ENV"
       - run:
           name: Create cache and configuration directories for the client dependencies
           command: task setup:yarn
@@ -41,11 +47,3 @@ jobs:
       - run:
           name: Lint the TS code
           command: task tests:eslint
-
-commands:
-  install_task:
-    description: Install the Task task runner
-    steps:
-      - run:
-          name: Install the latest Task binary
-          command: npm install -g @go-task/cli
