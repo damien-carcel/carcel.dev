@@ -1,18 +1,6 @@
 version: '3'
 
 tasks:
-  stylelint:
-    desc: Lint the CSS code.
-    cmds:
-      - docker compose run --rm node yarn stylelint
-    aliases: [s]
-
-  stylelint-fix:
-    desc: Fix the CSS code style.
-    cmds:
-      - docker compose run --rm node yarn stylelint --fix
-    aliases: [sf]
-
   prettier:
     desc: Check the code style.
     cmds:
@@ -25,6 +13,18 @@ tasks:
       - docker compose run --rm node yarn prettier --write
     aliases: [pf]
 
+  stylelint:
+    desc: Lint the CSS code.
+    cmds:
+      - docker compose run --rm node yarn stylelint
+    aliases: [s]
+
+  stylelint-fix:
+    desc: Fix the CSS code style.
+    cmds:
+      - docker compose run --rm node yarn stylelint --fix
+    aliases: [sf]
+
   eslint:
     desc: Lint the TypeScript code.
     cmds:
@@ -36,16 +36,16 @@ tasks:
     cmds:
       - echo ""
       - echo "|----------------------|"
-      - echo "| Lint the stylesheets |"
-      - echo "|----------------------|"
-      - echo ""
-      - task: stylelint
-      - echo ""
-      - echo "|----------------------|"
       - echo "| Check the code style |"
       - echo "|----------------------|"
       - echo ""
       - task: prettier
+      - echo ""
+      - echo "|----------------------|"
+      - echo "| Lint the stylesheets |"
+      - echo "|----------------------|"
+      - echo ""
+      - task: stylelint
       - echo ""
       - echo "|------------------|"
       - echo "| Lint the TS code |"
