@@ -52,4 +52,9 @@ tasks:
       - echo "|------------------|"
       - echo ""
       - task: eslint
+      - echo ""
+      - echo "|------------------------------------------------------------------------------|"
+      - echo "| All tests successful. You can run \"task run:down\" to stop the application. |"
+      - echo "|------------------------------------------------------------------------------|"
+      - echo ""
     aliases: [a]
