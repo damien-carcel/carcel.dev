@@ -1,3 +1,9 @@
+main {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .about-me {
     font-size: x-large;
 }
@@ -21,6 +27,12 @@
 }
 
 @media (width <= 1023px) {
+    main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
     .intro {
         margin-top: 50px;
     }

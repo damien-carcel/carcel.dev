@@ -23,12 +23,6 @@ nav {
     justify-content: flex-end;
 }
 
-main {
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 footer {
     align-items: center;
     background-color: whitesmoke;
@@ -40,7 +34,7 @@ footer {
 nav a {
     float: left;
     color: darkgrey;
-    font-size: 17px;
+    font-size: normal;
     padding: 18px 25px;
     text-align: center;
     text-decoration: none;
@@ -59,7 +53,7 @@ nav a.active {
 }
 
 .copyright {
-    font-size: large;
+    font-size: medium;
     color: dimgray;
 }
 
@@ -69,12 +63,6 @@ nav a.active {
 }
 
 @media (width <= 1023px) {
-    main {
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-    }
-
     nav a {
         padding: 10px;
     }
