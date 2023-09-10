@@ -1,0 +1,9 @@
+{
+    "yaml.schemas": {
+        "https://taskfile.dev/schema.json": [
+            "taskfiles/dependencies.yaml",
+            "taskfiles/setup.yaml",
+            "taskfiles/tests.yaml"
+        ]
+    }
+}
