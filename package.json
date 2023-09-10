@@ -13,7 +13,7 @@
     "node": ">=18.0.0 <19.0.0"
   },
   "dependencies": {
-    "@netlify/functions": "^1.4.0",
+    "@netlify/functions": "^2.0.2",
     "@remix-run/css-bundle": "^1.18.1",
     "@remix-run/netlify": "^1.18.1",
     "@remix-run/node": "^1.18.1",
