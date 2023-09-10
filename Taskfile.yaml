@@ -8,10 +8,10 @@ includes:
     aliases: [s]
   docker:
     taskfile: ./taskfiles/docker.yaml
-    aliases: [d]
+    aliases: [dc]
   dependencies:
     taskfile: ./taskfiles/dependencies.yaml
-    aliases: [dep]
+    aliases: [d]
   run:
     taskfile: ./taskfiles/run.yaml
     aliases: [r]

@@ -1,101 +1,78 @@
 html {
-  background-color: lightgray;
-  height: 100%;
-  margin: 0 auto;
-  max-width: 1024px;
+    background-color: lightgray;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
 }
 
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  margin: 0 auto;
-  min-height: 100%;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0 auto;
+    min-height: 100%;
 }
 
-main {
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media (width <= 1023px) {
-  main {
-    flex-direction: column-reverse;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-.photo > img {
-  border-radius: 50%;
-  width: 320px;
-}
-
-@media (width <= 1023px) {
-  .photo > img {
-    width: 256px;
-  }
-}
-
-.intro {
-  color: darkslategray;
-}
-
-@media (width <= 1023px) {
-  .intro {
-    margin-top: 50px;
-  }
-}
-
-.intro > div {
-  padding: 5px 0;
-}
-
-.hello {
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.about-me {
-  font-size: x-large;
+nav {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: flex-end;
 }
 
 footer {
-  align-items: center;
-  background-color: whitesmoke;
-  display: flex;
-  grid-row: 2 / 3;
-  justify-content: space-between;
-  padding: 20px 50px;
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
 }
 
-@media (width <= 1023px) {
-  footer {
-    padding: 10px;
-  }
+nav a {
+    float: left;
+    color: darkgrey;
+    font-size: normal;
+    padding: 18px 25px;
+    text-align: center;
+    text-decoration: none;
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #e6e6e6;
+}
+
+nav a.active {
+    color: dimgrey;
 }
 
 .copyright {
-  font-size: large;
-  color: dimgray;
+    font-size: medium;
+    color: dimgray;
 }
 
 .links img {
-  padding: 0 10px;
-  height: 32px;
+    padding: 0 10px;
+    height: 32px;
 }
 
 @media (width <= 1023px) {
-  .links img {
-    padding: 0 2px;
-    height: 24px;
-  }
+    nav a {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .links img {
+        padding: 0 2px;
+        height: 24px;
+    }
 }

@@ -18,3 +18,9 @@ tasks:
     cmds:
       - docker compose run --rm --service-ports node yarn start
     aliases: [p]
+
+  down:
+    desc: Stop the application (dev or prod preview alike).
+    cmds:
+      - docker compose down -v --remove-orphans
+    aliases: [dd]

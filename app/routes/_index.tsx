@@ -1,40 +1,24 @@
-import me from '../images/me.jpg';
-import linkedin from '../images/linkedin.png';
-import octocat from '../images/octocat.png';
-import twitter from '../images/twitter.png';
+import indexStylesheetUrl from '~/styles/index.css';
 
-import type { V2_MetaFunction } from '@remix-run/node';
+import type { LinksFunction, V2_MetaFunction } from '@remix-run/node';
+import Intro from '~/components/index/Intro';
+import Photo from '~/components/index/Photo';
 
 export const meta: V2_MetaFunction = () => {
-    return [{ title: "Hello, I'm Damien" }, { name: 'description', content: 'Welcome to my personal page!' }];
+    return [{ title: "Hello, I'm Damien" }, { name: 'description', content: 'Welcome to my personal page' }];
+};
+
+export const links: LinksFunction = () => {
+    return [{ rel: 'stylesheet', href: indexStylesheetUrl }];
 };
 
 export default function Index() {
     return (
         <>
             <main>
-                <div className="intro">
-                    <div className="hello">Hello, I'm Damien Carcel.</div>
-                    <div className="about-me">I like to craft software.</div>
-                </div>
-                <div className="photo">
-                    <img alt="me.jpg" src={me} />
-                </div>
+                <Intro />
+                <Photo />
             </main>
-            <footer>
-                <div className="copyright">© {new Date().getFullYear()} Damien Carcel</div>
-                <div className="links">
-                    <a href="https://github.com/damien-carcel/">
-                        <img alt="GitHub" src={octocat} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/damien-carcel/">
-                        <img alt="LinkedIn" src={linkedin} />
-                    </a>
-                    <a href="https://twitter.com/damiencarcel">
-                        <img alt="Twitter" src={twitter} />
-                    </a>
-                </div>
-            </footer>
         </>
     );
 }
