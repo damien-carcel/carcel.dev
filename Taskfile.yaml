@@ -3,23 +3,14 @@ version: '3'
 silent: true
 
 includes:
-  setup:
-    taskfile: ./taskfiles/setup.yaml
-    aliases: [s]
-  docker:
-    taskfile: ./taskfiles/docker.yaml
-    aliases: [dc]
-  dependencies:
-    taskfile: ./taskfiles/dependencies.yaml
-    aliases: [d]
-  run:
-    taskfile: ./taskfiles/run.yaml
-    aliases: [r]
-  tests:
-    taskfile: ./taskfiles/tests.yaml
-    aliases: [t]
+    dependencies:
+        taskfile: ./taskfiles/dependencies.yaml
+        aliases: [d]
+    tests:
+        taskfile: ./taskfiles/tests.yaml
+        aliases: [t]
 
 tasks:
-  default:
-    cmds:
-      - task --list
+    default:
+        cmds:
+            - task --list

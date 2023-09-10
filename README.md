@@ -2,11 +2,14 @@
 
 ## Requirements
 
-- Docker 20.10 and more recent
-- Docker Compose v2
-- [Task](https://taskfile.dev/)
+-   Docker 24.0.5 or more recent
+-   Docker Compose 2.20.3 or more recent
 
 ## How to use it?
+
+Open VS Code, and accept to open the project in Dev Containers when prompted.
+
+The, the full list of actions can be accessed by running the following command in VS Code Dev Containers terminal:
 
 ```bash
 $ task
