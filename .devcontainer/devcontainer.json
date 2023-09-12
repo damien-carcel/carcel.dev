@@ -16,7 +16,7 @@
         }
     },
     "name": "carcel.dev",
-    "initializeCommand": "./setup.sh",
+    "initializeCommand": "./.devcontainer/setup.sh",
     "runServices": ["dev", "prod"],
     "remoteUser": "node",
     "service": "devcontainer",
