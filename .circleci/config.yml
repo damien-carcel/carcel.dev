@@ -36,10 +36,10 @@ jobs:
                       - ~/.cache/yarn
             - run:
                   name: Lint the stylesheets
-                  command: task tests:stylelint
+                  command: task tests:stylelint:check
             - run:
                   name: Check the code style
-                  command: task tests:prettier
+                  command: task tests:prettier:check
             - run:
                   name: Lint the TS code
-                  command: task tests:eslint
+                  command: task tests:eslint:check
