@@ -15,8 +15,9 @@
             ]
         }
     },
-    "name": "carcel.dev",
     "initializeCommand": "./.devcontainer/setup.sh",
+    "name": "carcel.dev",
+    "postCreateCommand": "task dependencies:install",
     "runServices": ["dev", "prod"],
     "remoteUser": "node",
     "service": "devcontainer",
