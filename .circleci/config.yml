@@ -1,45 +1,74 @@
 version: 2.1
 
 workflows:
-    pull_request:
-        jobs:
-            - tests:
-                  context:
-                      - docker-hub-credentials
-                  filters:
-                      branches:
-                          ignore:
-                              - index
+  pull_request:
+    jobs:
+      - tests:
+          context:
+            - docker-hub-credentials
+          filters:
+            branches:
+              ignore:
+                - main
 
 jobs:
-    tests:
-        docker:
-            - image: node:18
-        steps:
-            - checkout
-            - run:
-                  name: Create Yarn cache and configuration directories and files
-                  command: ./.devcontainer/setup.sh
-            - run:
-                  name: Install the latest Task binary
-                  command: npm install -g @go-task/cli
-            - restore_cache:
-                  keys:
-                      - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                      - yarn-{{ .Environment.CACHE_VERSION }}-
-            - run:
-                  name: Install dependencies
-                  command: task dependencies:install
-            - save_cache:
-                  key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ~/.cache/yarn
-            - run:
-                  name: Lint the stylesheets
-                  command: task tests:stylelint:check
-            - run:
-                  name: Check the code style
-                  command: task tests:prettier:check
-            - run:
-                  name: Lint the TS code
-                  command: task tests:eslint:check
+  tests:
+    machine:
+      image: ubuntu-2204:2023.07.2
+    steps:
+      - checkout
+      - run:
+          name: Install the latest Task binary
+          command: npm install -g @go-task/cli
+      - run:
+          name: Pull Docker images
+          command: task docker:pull
+      - run:
+          name: Create cache and configuration directories for the front-end dependencies
+          command: task setup:yarn
+      - restore_cache:
+          keys:
+            - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.CACHE_VERSION }}-
+      - run:
+          name: Ensure write permissions for Docker containers
+          command: sudo chown -R 1000:1000 ../project ~/.yarnrc ~/.config/yarn ~/.cache/yarn ~/.cache/Cypress
+      - run:
+          name: Install dependencies
+          command: |
+            task dependencies:install
+            task dependencies:cypress
+      - save_cache:
+          key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+            - ./.next/cache
+      - run:
+          name: Check the code style
+          command: task tests:check-code-style
+      - run:
+          name: Lint the stylesheets
+          command: task tests:lint-css
+      - run:
+          name: Lint the application code
+          command: task tests:lint-ts -- --format junit -o test_results/eslint.xml
+      - run:
+          name: Check the code typing
+          command: task tests:check-types
+      - run:
+          name: Run unit tests
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: test_results
+            JEST_JUNIT_OUTPUT_NAME: unit.xml
+          command: task tests:unit-tests -- --reporters=default --reporters=jest-junit
+      - run:
+          name: Run component tests
+          command: task tests:component-tests-headless
+      - run:
+          name: Run end-to-end tests
+          command: |
+            task run:database
+            task run:migrate
+            task tests:e2e-tests-headless
+      - store_test_results:
+          path: test_results
