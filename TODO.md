@@ -1,2 +1,1 @@
-- Migrate the existing pages to Next
 - Run the tasks directly in Dev Containers like before
