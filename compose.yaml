@@ -50,7 +50,7 @@ services:
     environment:
       <<: *cache-env-variables
       CYPRESS_RECORD_KEY: ${CYPRESS_RECORD_KEY-:to_be_replaced_with_a_real_key}
-      DISPLAY: ${DISPLAY}
+      # DISPLAY: ${DISPLAY}
     user: 1000:1000
     volumes:
       - .:/srv/app
@@ -58,5 +58,5 @@ services:
       - ${HOST_YARN_CACHE_FOLDER:-~/.cache/yarn}:/home/yarn-cache
       - ${HOST_YARN_CONFIG_FOLDER:-~/.yarn}:/.yarn
       - ${HOST_YARN_CONFIG_FILE:-~/.yarnrc}:/.yarnrc
-      - /tmp/.X11-unix:/tmp/.X11-unix
+      # - /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: /srv/app
