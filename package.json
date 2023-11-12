@@ -4,10 +4,6 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "tests:component": "cypress open --component",
-    "tests:component:headless": "cypress run --component --record",
-    "tests:e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
-    "tests:e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e --record\"",
     "tests:lint:css": "stylelint '**/*.css'",
     "tests:lint:js": "next lint",
     "tests:prettier": "prettier '**/*.{ts,tsx}'",
@@ -30,7 +26,6 @@
     "@types/node": "^20.8.6",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "cypress": "^13.3.1",
     "eslint": "^8.47.0",
     "eslint-config-next": "^14.0.1",
     "eslint-config-prettier": "^9.0.0",
@@ -40,7 +35,6 @@
     "prettier": "^3.0.2",
     "start-server-and-test": "^2.0.0",
     "stylelint": "^15.10.1",
-    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^34.0.0",
     "typescript": "^5.1.6"
   }
