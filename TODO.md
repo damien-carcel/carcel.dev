@@ -1,2 +1,1 @@
-- Run the tasks directly in Dev Containers like before
 - Configure Jest to be able to write tests in TypeScript
