@@ -4,6 +4,8 @@ services:
       - yarn
       - dev
     image: node:18
+    networks:
+      - dev
     ports:
       - 3000:3000
     user: 1000:1000
@@ -13,12 +15,21 @@ services:
 
   prod:
     command:
-      - yarn
-      - start
+      - /bin/bash
+      - -c
+      - |
+        yarn build
+        yarn start
     image: node:18
+    networks:
+      - prod
     ports:
       - 8000:3000
     user: 1000:1000
     volumes:
       - .:/srv/app
     working_dir: /srv/app
+
+networks:
+  dev:
+  prod:
