@@ -1,66 +1,102 @@
 version: '3'
 
 tasks:
-    prettier:check:
-        desc: Check the code style.
-        cmds:
-            - yarn prettier --check
-        aliases: [p:c]
+  static:prettier:check:
+    desc: Check the code style.
+    cmds:
+      - yarn tests:prettier --check
+    aliases: [p:c]
 
-    prettier:fix:
-        desc: Fix the code style.
-        cmds:
-            - yarn prettier --write
-        aliases: [p:f]
+  static:prettier:fix:
+    desc: Fix the code style.
+    cmds:
+      - yarn tests:prettier --write
+    aliases: [p:f]
 
-    stylelint:check:
-        desc: Lint the CSS code.
-        cmds:
-            - yarn stylelint
-        aliases: [s:c]
+  static:css:lint:
+    desc: Lint the stylesheets.
+    cmds:
+      - yarn tests:lint:css
+    aliases: [c:l]
 
-    stylelint:fix:
-        desc: Fix the CSS code style.
-        cmds:
-            - yarn stylelint --fix
-        aliases: [s:f]
+  static:css:fix:
+    desc: Fix the stylesheets.
+    cmds:
+      - yarn tests:lint:css --fix
+    aliases: [c:f]
 
-    eslint:check:
-        desc: Lint the TypeScript code.
-        cmds:
-            - yarn eslint
-        aliases: [l:c]
+  static:ts:lint:
+    desc: Lint the application code.
+    cmds:
+      - yarn tests:lint:js {{.CLI_ARGS}}
+    aliases: [t:l]
 
-    eslint:fix:
-        desc: Fix the JavaScript code issues.
-        cmds:
-            - yarn eslint --fix
-        aliases: [l:f]
+  static:ts:fix:
+    desc: Fix the application code.
+    cmds:
+      - yarn tests:lint:js --fix
+    aliases: [t:f]
 
-    all:
-        desc: Execute all the tests.
-        cmds:
-            - echo ""
-            - echo "|----------------------|"
-            - echo "| Check the code style |"
-            - echo "|----------------------|"
-            - echo ""
-            - task: prettier:check
-            - echo ""
-            - echo "|----------------------|"
-            - echo "| Lint the stylesheets |"
-            - echo "|----------------------|"
-            - echo ""
-            - task: stylelint:check
-            - echo ""
-            - echo "|----------------------|"
-            - echo "|   Lint the TS code   |"
-            - echo "|----------------------|"
-            - echo ""
-            - task: eslint:check
-            - echo ""
-            - echo "|----------------------|"
-            - echo "| All tests successful |"
-            - echo "|----------------------|"
-            - echo ""
-        aliases: [a]
+  static:types:check:
+    desc: Check the code typing.
+    cmds:
+      - yarn tests:typecheck
+    aliases: [t:c]
+
+  unit:run:
+    desc: Run unit tests.
+    cmds:
+      - yarn tests:unit:ci {{.CLI_ARGS}}
+    aliases: [u:r]
+
+  unit:update-snapshots:
+    desc: Run unit tests.
+    cmds:
+      - yarn tests:unit:ci -u
+    aliases: [u:u]
+
+  unit:watch:
+    desc: Run unit tests in watch mode.
+    cmds:
+      - yarn tests:unit:watch
+    aliases: [u:w]
+
+  all:
+    desc: Execute all the tests.
+    cmds:
+      - echo ""
+      - echo "|----------------------|"
+      - echo "| Check the code style |"
+      - echo "|----------------------|"
+      - echo ""
+      - task: static:prettier:check
+      - echo ""
+      - echo "|----------------------|"
+      - echo "| Lint the stylesheets |"
+      - echo "|----------------------|"
+      - echo ""
+      - task: static:css:lint
+      - echo ""
+      - echo "|---------------------------|"
+      - echo "| Lint the application code |"
+      - echo "|---------------------------|"
+      - echo ""
+      - task: static:ts:lint
+      - echo ""
+      - echo "|-----------------------|"
+      - echo "| Check the code typing |"
+      - echo "|-----------------------|"
+      - echo ""
+      - task: static:types:check
+      - echo ""
+      - echo "|----------------|"
+      - echo "| Run unit tests |"
+      - echo "|----------------|"
+      - echo ""
+      - task: unit:run
+      - echo ""
+      - echo "|------------------------------------------------------------------------------|"
+      - echo "| All tests successful. You can run \"task run:down\" to stop the application. |"
+      - echo "|------------------------------------------------------------------------------|"
+      - echo ""
+    aliases: [a]

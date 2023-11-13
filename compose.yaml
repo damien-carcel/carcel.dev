@@ -1,24 +1,35 @@
-x-common: &common
+services:
+  dev:
+    command:
+      - yarn
+      - dev
     image: node:18
-    user: ${HOST_USER_IDS:-1000:1000}
+    networks:
+      - dev
+    ports:
+      - 3000:3000
+    user: 1000:1000
     volumes:
-        - .:/srv/app
+      - .:/srv/app
     working_dir: /srv/app
 
-# Netlify CLI needs Python, which is not present in "node:slim". So we use the full "node" image instead.
-services:
-    dev:
-        <<: *common
-        command: yarn dev
-        expose:
-            - 3000
-        ports:
-            - 3000:3000
+  prod:
+    command:
+      - /bin/bash
+      - -c
+      - |
+        yarn build
+        yarn start
+    image: node:18
+    networks:
+      - prod
+    ports:
+      - 8000:3000
+    user: 1000:1000
+    volumes:
+      - .:/srv/app
+    working_dir: /srv/app
 
-    prod:
-        <<: *common
-        command: yarn start
-        expose:
-            - 8888
-        ports:
-            - 8888:8888
+networks:
+  dev:
+  prod:

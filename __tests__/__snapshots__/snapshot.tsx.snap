@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage 1`] = `
+<div>
+  <div
+    class="main"
+  >
+    <div
+      class="intro"
+    >
+      <div
+        class="hello"
+      >
+        Hello, I'm Damien Carcel.
+      </div>
+      <div
+        class="about"
+      >
+        I like to craft software.
+      </div>
+    </div>
+    <div
+      class="photo"
+    >
+      <img
+        alt="me.jpg"
+        data-nimg="1"
+        decoding="async"
+        height="320"
+        loading="lazy"
+        src="/_next/image?url=%2Fme.jpg&w=640&q=75"
+        srcset="/_next/image?url=%2Fme.jpg&w=384&q=75 1x, /_next/image?url=%2Fme.jpg&w=640&q=75 2x"
+        style="color: transparent;"
+        width="320"
+      />
+    </div>
+  </div>
+</div>
+`;

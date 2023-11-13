@@ -1,45 +1,58 @@
 version: 2.1
 
 workflows:
-    pull_request:
-        jobs:
-            - tests:
-                  context:
-                      - docker-hub-credentials
-                  filters:
-                      branches:
-                          ignore:
-                              - index
+  pull_request:
+    jobs:
+      - tests:
+          context:
+            - docker-hub-credentials
+          filters:
+            branches:
+              ignore:
+                - main
 
 jobs:
-    tests:
-        docker:
-            - image: node:18
-        steps:
-            - checkout
-            - run:
-                  name: Create Yarn cache and configuration directories and files
-                  command: ./.devcontainer/setup.sh
-            - run:
-                  name: Install the latest Task binary
-                  command: npm install -g @go-task/cli
-            - restore_cache:
-                  keys:
-                      - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                      - yarn-{{ .Environment.CACHE_VERSION }}-
-            - run:
-                  name: Install dependencies
-                  command: task dependencies:install
-            - save_cache:
-                  key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ~/.cache/yarn
-            - run:
-                  name: Lint the stylesheets
-                  command: task tests:stylelint:check
-            - run:
-                  name: Check the code style
-                  command: task tests:prettier:check
-            - run:
-                  name: Lint the TS code
-                  command: task tests:eslint:check
+  tests:
+    docker:
+      - image: node:18
+    steps:
+      - checkout
+      - run:
+          name: Create Yarn cache and configuration directories and files
+          command: ./.devcontainer/setup.sh
+      - run:
+          name: Install the latest Task binary
+          command: npm install -g @go-task/cli
+      - restore_cache:
+          keys:
+            - yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.CACHE_VERSION }}-
+      - run:
+          name: Install dependencies
+          command: |
+            task dependencies:install
+      - save_cache:
+          key: yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+            - ./.next/cache
+      - run:
+          name: Check the code style
+          command: task tests:static:prettier:check
+      - run:
+          name: Lint the stylesheets
+          command: task tests:static:css:lint
+      - run:
+          name: Lint the application code
+          command: task tests:static:ts:lint -- --format junit -o test_results/eslint.xml
+      - run:
+          name: Check the code typing
+          command: task tests:static:types:check
+      - run:
+          name: Run unit tests
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: test_results
+            JEST_JUNIT_OUTPUT_NAME: unit.xml
+          command: task tests:unit:run -- --reporters=default --reporters=jest-junit
+      - store_test_results:
+          path: test_results

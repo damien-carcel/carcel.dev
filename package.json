@@ -1,39 +1,43 @@
 {
   "private": true,
-  "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
-    "start": "netlify serve",
-    "eslint": "eslint '**/*.{ts,tsx}'",
-    "prettier": "prettier '**/*.{ts,tsx}'",
-    "stylelint": "stylelint '**/*.css'"
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "tests:lint:css": "stylelint '**/*.css'",
+    "tests:lint:js": "next lint",
+    "tests:prettier": "prettier '**/*.{ts,tsx}'",
+    "tests:typecheck": "tsc -b",
+    "tests:unit:ci": "jest --ci",
+    "tests:unit:update-snapshots": "jest --jest --updateSnapshot",
+    "tests:unit:watch": "jest --watch"
   },
   "engines": {
     "node": ">=18.0.0 <19.0.0"
   },
   "dependencies": {
-    "@netlify/functions": "^2.0.2",
-    "@remix-run/css-bundle": "^1.18.1",
-    "@remix-run/netlify": "^1.18.1",
-    "@remix-run/node": "^1.18.1",
-    "@remix-run/react": "^1.18.1",
-    "cross-env": "^7.0.3",
-    "isbot": "^3.6.8",
+    "next": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.18.1",
-    "@remix-run/eslint-config": "^1.18.1",
-    "@remix-run/serve": "^1.18.1",
-    "@types/node": "^20.4.1",
-    "@types/react": "^18.0.35",
-    "@types/react-dom": "^18.0.11",
-    "eslint": "^8.38.0",
-    "netlify-cli": "^16.0.2",
-    "stylelint": "^15.2.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.8.6",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "prettier": "^3.0.2",
+    "start-server-and-test": "^2.0.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   }
 }
