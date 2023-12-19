@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Hello, I&apos;m Damien',
-  description: 'Let&apos;s talk about me :).',
+  title: "Hello, I'm Damien",
+  description: "Let's talk about me :).",
 };
 
 export default function About() {
