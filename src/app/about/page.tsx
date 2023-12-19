@@ -17,7 +17,7 @@ export default function About() {
           accompanied me throughout my studies and professional career, as well as in my spare time.
         </p>
         <p>
-          I have an atypical background. First an Earth Sciences scientist, I obtained a PhD degree in 2008. After that,
+          I have an atypical background. First an Earth Sciences scientist, I obtained a PhD degree in 2009. After that,
           I taught Earth Sciences in middle and high-school for a few years. Then, in 2013, I eventually decided to
           learn how to be a software engineer by myself, and did not regret that move ever since.
         </p>
