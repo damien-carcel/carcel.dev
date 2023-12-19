@@ -6,7 +6,7 @@ import Photo from '@/components/home/Photo';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Hello, I&apos;m Damien',
+  title: "Hello, I'm Damien",
   description: 'Welcome to my personal page',
 };
 
