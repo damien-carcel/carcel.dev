@@ -14,6 +14,9 @@ export default function NavBar() {
       <Link href="/about" className={'/about' === currentRoute ? 'active' : ''}>
         About Me
       </Link>
+      <Link href="/cv" className={'/cv' === currentRoute ? 'active' : ''}>
+        CV
+      </Link>
     </nav>
   );
 }
