@@ -1,4 +1,4 @@
-import styles from '@/app//about/page.module.css';
+import styles from './style.module.css';
 
 type IdentityProps = {
   name: string;
@@ -7,9 +7,9 @@ type IdentityProps = {
 
 export default function Identity(props: IdentityProps) {
   return (
-    <section className={styles.identity}>
+    <div className={styles.section}>
       <div className={styles.name}>{props.name}</div>
       <div className={styles.profession}>{props.profession}</div>
-    </section>
+    </div>
   );
 }

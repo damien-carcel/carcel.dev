@@ -1,0 +1,27 @@
+.section {
+  padding: 10px 0;
+}
+
+.section_title {
+  border-bottom: 1px solid #888;
+  color: dimgrey;
+  font-size: x-large;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: xxx-large;
+  font-weight: bold;
+  padding: 5px 0;
+  text-transform: capitalize;
+}
+
+.profession {
+  color: dimgrey;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 5px 0;
+  text-transform: uppercase;
+}

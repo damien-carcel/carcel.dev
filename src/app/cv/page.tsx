@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 
-import styles from './page.module.css';
 import Identity from '@/components/cv/identity';
 import Section from '@/components/cv/section';
 
+import styles from './page.module.css';
+
 export const metadata: Metadata = {
   title: "Hello, I'm Damien",
-  description: 'Here is my  curriculum vitæ.',
+  description: 'Here is my curriculum vitæ.',
 };
 
 /**
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
  * - Compute my age instead of hardcoding it
  * - Correctly format my last experience
  * - Add phone and email icons right before their values
+ * - Check and adapt on mobile
  */
 
 export default function Cv() {
