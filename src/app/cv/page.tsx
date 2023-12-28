@@ -4,6 +4,7 @@ import Identity from '@/components/cv/identity';
 import Section from '@/components/cv/section';
 
 import styles from './page.module.css';
+import Annexes from '@/components/cv/annexes';
 
 export const metadata: Metadata = {
   title: "Hello, I'm Damien",
@@ -12,7 +13,6 @@ export const metadata: Metadata = {
 
 /**
  * TODO:
- * - Add annexe sections (simpler than regular sections)
  * - Add my photo to the CV
  * - Compute my age instead of hardcoding it
  * - Add phone and email icons right before their values
@@ -24,7 +24,7 @@ export default function Cv() {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <Identity name="Damien Carcel" profession="Sofware engineer" />
+        <Identity name="Damien Carcel" profession="Software engineer" />
         <Section
           title="Contact"
           subSections={[
@@ -108,12 +108,42 @@ export default function Cv() {
             {
               title: 'Development tools',
               value: {
-                main: 'Jetbrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions',
+                main: 'JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions',
                 important: true,
               },
             },
             { title: 'Operating systems', value: { main: 'GNU/Linux, Windows, macOS', important: true } },
             { title: 'Design', value: { main: 'GIMP, Inkscape, Adobe Illustrator', important: true } },
+          ]}
+        />
+        <Annexes
+          annexes={[
+            {
+              title: 'Professional highlights',
+              content: [
+                {
+                  key: '1',
+                  text: 'I enjoy coaching and bringing new knowledge when I can while learning new things from new people.',
+                },
+                {
+                  key: '2',
+                  text: 'My main thrill is trying to understand what are users problems and to bring solutions to those.',
+                },
+              ],
+            },
+            {
+              title: 'Other skills and hobbies',
+              content: [
+                {
+                  key: '1',
+                  text: 'Reading (mainly fantasy, science fiction and manga)',
+                },
+                {
+                  key: '2',
+                  text: 'Fishing',
+                },
+              ],
+            },
           ]}
         />
       </div>
