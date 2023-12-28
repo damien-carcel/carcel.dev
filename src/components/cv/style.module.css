@@ -2,13 +2,30 @@
   padding: 10px 0;
 }
 
-.section_title {
+.section-title {
   border-bottom: 1px solid #888;
   color: dimgrey;
-  font-size: x-large;
+  font-size: large;
   padding: 5px 0;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+}
+
+.subsection-title {
+  color: grey;
+  padding-right: 15px;
+  text-align: right;
+  width: 25%;
+}
+
+.subsection-content {
+  width: 75%;
 }
 
 .name {

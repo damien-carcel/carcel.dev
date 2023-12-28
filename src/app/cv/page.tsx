@@ -12,12 +12,13 @@ export const metadata: Metadata = {
 
 /**
  * TODO:
+ * - Correctly format my last experience (Akeneo XP on several lines)
  * - Add annexe sections (simpler than regular sections)
  * - Add my photo to the CV
  * - Compute my age instead of hardcoding it
- * - Correctly format my last experience
  * - Add phone and email icons right before their values
- * - Check and adapt on mobile
+ * - Check and possibly adapt on mobile
+ * - Make the CV printable
  */
 
 export default function Cv() {

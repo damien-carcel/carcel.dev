@@ -8,12 +8,12 @@ export type SubSectionProps = {
 export default function SubSection(props: SubSectionProps) {
   return (
     <div className={styles.subsection}>
-      <div className={styles.subsection_title}>{props.title}</div>
-      <div>
+      <div className={styles['subsection-title']}>{props.title}</div>
+      <div className={styles['subsection-content']}>
         <div style={{ fontWeight: props.value.important ? 'bold' : 'normal' }} className={styles.subsection_value}>
           {props.value.main}
         </div>
-        {props.value.sub ? <div className={styles.subsection_value}>{props.value.sub}</div> : ''}
+        {props.value.sub ? <div className={styles['subsection-value']}>{props.value.sub}</div> : ''}
       </div>
     </div>
   );

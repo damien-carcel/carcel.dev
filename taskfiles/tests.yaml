@@ -95,8 +95,8 @@ tasks:
       - echo ""
       - task: unit:run
       - echo ""
-      - echo "|------------------------------------------------------------------------------|"
-      - echo "| All tests successful. You can run \"task run:down\" to stop the application. |"
-      - echo "|------------------------------------------------------------------------------|"
+      - echo "|----------------------|"
+      - echo "| All tests successful |"
+      - echo "|----------------------|"
       - echo ""
     aliases: [a]
