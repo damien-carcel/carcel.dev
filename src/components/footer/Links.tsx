@@ -1,5 +1,6 @@
 import ImageLink from '@/components/footer/ImageLink';
-import styles from '@/components/Footer.module.css';
+
+import styles from './style.module.css';
 
 export default function Links() {
   return (
