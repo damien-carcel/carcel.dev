@@ -9,11 +9,11 @@ type SectionProps = {
 
 export default function Section(props: SectionProps) {
   return (
-    <section className={styles.section}>
+    <div className={styles.section}>
       <div className={styles['section-title']}>{props.title}</div>
       {props.subSections.map((subsection) => (
         <SubSection key={subsection.title} title={subsection.title} value={subsection.value} />
       ))}
-    </section>
+    </div>
   );
 }
