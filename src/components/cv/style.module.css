@@ -24,8 +24,12 @@
   width: 25%;
 }
 
-.subsection-content {
+.subsection-value {
   width: 75%;
+}
+
+.subsection-value > ul {
+  margin: inherit;
 }
 
 .name {

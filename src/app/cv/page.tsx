@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 
 /**
  * TODO:
- * - Correctly format my last experience (Akeneo XP on several lines)
  * - Add annexe sections (simpler than regular sections)
  * - Add my photo to the CV
  * - Compute my age instead of hardcoding it
@@ -29,7 +28,7 @@ export default function Cv() {
         <Section
           title="Contact"
           subSections={[
-            { title: 'Address', value: { main: '12 rue Pitre de Lisle du Dreneuc 44200 Nantes, France' } },
+            { title: 'Address', value: { main: '12 rue Pitre de Lisle du Dreneuc, 44200 Nantes, France' } },
             { title: 'Phone', value: { main: '+33 6 20 45 25 55' } },
             { title: 'Email', value: { main: 'damien.carcel@gmail.com' } },
             { title: 'Nationality', value: { main: 'French' } },
@@ -42,9 +41,12 @@ export default function Cv() {
             {
               title: '2014 - Today',
               value: {
-                main: `Software Engineer at Akeneo. Including}:
-- Lead Software Engineer from January 2020 to June 2023
-- Senior Software Engineer since July 2023`,
+                main: 'Software Engineer at Akeneo. Including}:',
+                isList: true,
+                sub: [
+                  { key: '1', text: 'Lead Software Engineer from January 2020 to June 2023' },
+                  { key: '2', text: 'Senior Software Engineer since July 2023' },
+                ],
               },
             },
             { title: '2010 - 2013', value: { main: 'Earth-Sciences contractual teacher in middle and high school' } },
@@ -58,7 +60,7 @@ export default function Cv() {
               title: '2009',
               value: {
                 main: 'PHD in Earth Sciences',
-                sub: ' Claude Bernard Lyon 1 University, Lyon, France',
+                sub: [{ key: '1', text: 'Claude Bernard Lyon 1 University, Lyon, France' }],
                 important: true,
               },
             },
@@ -66,7 +68,7 @@ export default function Cv() {
               title: '2006',
               value: {
                 main: 'Master in Earth Sciences',
-                sub: ' Claude Bernard Lyon 1 University, Lyon, France',
+                sub: [{ key: '1', text: 'Claude Bernard Lyon 1 University, Lyon, France' }],
                 important: true,
               },
             },
@@ -74,7 +76,7 @@ export default function Cv() {
               title: '2004',
               value: {
                 main: 'License in Earth Sciences',
-                sub: ' Claude Bernard Lyon 1 University, Lyon, France',
+                sub: [{ key: '1', text: 'Claude Bernard Lyon 1 University, Lyon, France' }],
                 important: true,
               },
             },
@@ -86,7 +88,11 @@ export default function Cv() {
             { title: 'Mother tongue', value: { main: 'French', important: true } },
             {
               title: 'Foreign languages',
-              value: { main: 'English', important: true, sub: 'Good command of both written and spoken language' },
+              value: {
+                main: 'English',
+                important: true,
+                sub: [{ key: '1', text: 'Good command of both written and spoken language' }],
+              },
             },
           ]}
         />
