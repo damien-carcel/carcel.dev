@@ -1,6 +1,8 @@
 services:
   devcontainer:
     build:
+      args:
+        NODE_VERSION: ${NODE_VERSION}
       context: ./docker/devcontainer
     command:
       - sleep
@@ -9,7 +11,7 @@ services:
       JEST_JUNIT_OUTPUT_DIR: ${JEST_JUNIT_OUTPUT_DIR:-}
       JEST_JUNIT_OUTPUT_NAME: ${JEST_JUNIT_OUTPUT_NAME:-result.xml}
       YARN_CACHE_FOLDER: /home/yarn-cache
-    user: 1000:1000
+    user: ${HOST_USER_IDS:-1000:1000}
     volumes:
       - type: bind
         source: .
@@ -29,12 +31,12 @@ services:
     command:
       - yarn
       - dev
-    image: node:18
+    image: node:${NODE_VERSION}
     networks:
       - dev
     ports:
       - 3000:3000
-    user: 1000:1000
+    user: ${HOST_USER_IDS:-1000:1000}
     volumes:
       - type: bind
         source: .
@@ -48,12 +50,12 @@ services:
       - |
         yarn build
         yarn start
-    image: node:18
+    image: node:${NODE_VERSION}
     networks:
       - prod
     ports:
       - 8000:3000
-    user: 1000:1000
+    user: ${HOST_USER_IDS:-1000:1000}
     volumes:
       - type: bind
         source: .
