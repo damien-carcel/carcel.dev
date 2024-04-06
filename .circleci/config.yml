@@ -18,9 +18,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Create npm cache and configuration directories and files
-          command: ./.devcontainer/setup.sh
-      - run:
           name: Install the latest Task binary
           command: npm install -g @go-task/cli
       - restore_cache:
