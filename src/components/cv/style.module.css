@@ -10,12 +10,28 @@
 }
 
 .annex {
-  width: 50%;
   padding-left: 15px;
+  width: 50%;
 }
 
 .annex-content > p {
   text-align: justify;
+}
+
+.identity {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+.identity-photo {
+  margin-bottom: -50px;
+  text-align: right;
+  width: 20%;
+}
+
+.identity-value {
+  width: 80%;
 }
 
 .name {

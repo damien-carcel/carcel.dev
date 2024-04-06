@@ -113,7 +113,6 @@ export default function Cv() {
               },
             },
             { title: 'Operating systems', value: { main: 'GNU/Linux, Windows, macOS', important: true } },
-            { title: 'Design', value: { main: 'GIMP, Inkscape, Adobe Illustrator', important: true } },
           ]}
         />
         <Annexes
