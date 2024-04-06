@@ -1,5 +1,538 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders CV page 1`] = `
+<div>
+  <div
+    class="main"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="identity"
+      >
+        <div
+          class="identity-value"
+        >
+          <div
+            class="name"
+          >
+            Damien Carcel
+          </div>
+          <div
+            class="profession"
+          >
+            Software engineer
+          </div>
+        </div>
+        <div
+          class="identity-photo"
+        >
+          <img
+            alt="me.jpg"
+            data-nimg="1"
+            decoding="async"
+            height="160"
+            loading="lazy"
+            src="/_next/image?url=%2Fme.jpg&w=384&q=75"
+            srcset="/_next/image?url=%2Fme.jpg&w=256&q=75 1x, /_next/image?url=%2Fme.jpg&w=384&q=75 2x"
+            style="color: transparent;"
+            width="160"
+          />
+        </div>
+      </div>
+      <div
+        class="section"
+      >
+        <div
+          class="section-title"
+        >
+          Contact
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Address
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              12 rue Pitre de Lisle du Dreneuc, 44200 Nantes, France
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Phone
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              +33 6 20 45 25 55
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Email
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              damien.carcel@gmail.com
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Nationality
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              French
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Date of birth
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              March 28, 1982 (41 years old)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="section"
+      >
+        <div
+          class="section-title"
+        >
+          Experiences
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2014 - Today
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              Software Engineer at Akeneo. Including}:
+            </div>
+            <ul>
+              <li>
+                Lead Software Engineer from January 2020 to June 2023
+              </li>
+              <li>
+                Senior Software Engineer since July 2023
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2010 - 2013
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              Earth-Sciences contractual teacher in middle and high school
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2008
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              Earth-Sciences contractual teacher at ISARA Lyon engineering school
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="section"
+      >
+        <div
+          class="section-title"
+        >
+          Education
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2009
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              PHD in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2006
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              Master in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            2004
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              License in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="section"
+      >
+        <div
+          class="section-title"
+        >
+          Languages
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Mother tongue
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              French
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Foreign languages
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              English
+            </div>
+            <div>
+              <div>
+                Good command of both written and spoken language
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="section"
+      >
+        <div
+          class="section-title"
+        >
+          Professional skills
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Development languages
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              PHP, Symfony, Go, JavaScript, TypeScript, React
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Development Practices
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              TDD, DDD, CI/CD
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Databases
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              MySQL, PostgreSQL, Elasticsearch
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Development tools
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Operating systems
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: bold;"
+            >
+              GNU/Linux, Windows, macOS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="annexes"
+      >
+        <div
+          class="annex"
+        >
+          <div
+            class="section-title"
+          >
+            Professional highlights
+          </div>
+          <div
+            class="annex-content"
+          >
+            <p>
+              I enjoy coaching and bringing new knowledge when I can while learning new things from new people.
+            </p>
+            <p>
+              My main thrill is trying to understand what are users problems and to bring solutions to those.
+            </p>
+          </div>
+        </div>
+        <div
+          class="annex"
+        >
+          <div
+            class="section-title"
+          >
+            Other skills and hobbies
+          </div>
+          <div
+            class="annex-content"
+          >
+            <p>
+              Reading (mainly fantasy, science fiction and manga)
+            </p>
+            <p>
+              Fishing
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders about page 1`] = `
+<div>
+  <div
+    class="main"
+  >
+    <div
+      class="container"
+    >
+      <p>
+        I am a software engineer with 
+        10
+         years of experience.
+      </p>
+      <p>
+        But before that, I have been passionate about free and open-source software for decades. A passion that has accompanied me throughout my studies and professional career, as well as in my spare time.
+      </p>
+      <p>
+        I have an atypical background. First an Earth Sciences scientist, I obtained a PhD degree in 2009. After that, I taught Earth Sciences in middle and high-school for a few years. Then, in 2013, I eventually decided to learn how to be a software engineer by myself, and did not regret that move ever since.
+      </p>
+      <p>
+        I kept from my academic years a taste for knowledge sharing. I like to mentor my pairs anytime I can, and always look to learn new things and improve myself.
+      </p>
+      <p>
+        I do also especially value practices such as TDD, pair and mob programming, code reviews. I consider that working as a team, and not as a simple group of individual and isolated contributors, the best way to achieve quality software.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`renders homepage 1`] = `
 <div>
   <div
