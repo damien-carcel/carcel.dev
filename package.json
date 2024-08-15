@@ -4,13 +4,12 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "tests:lint:css": "stylelint '**/*.css'",
-    "tests:lint:js": "next lint",
-    "tests:prettier": "prettier '**/*.{ts,tsx}'",
-    "tests:typecheck": "tsc -b",
-    "tests:unit:ci": "jest --ci",
-    "tests:unit:update-snapshots": "jest --jest --updateSnapshot",
-    "tests:unit:watch": "jest --watch"
+    "lint": "next lint",
+    "prettier": "prettier '**/*.{js,jsx,mjs,ts,tsx}'",
+    "stylelint": "stylelint '**/*.css'",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "typecheck": "tsc -b"
   },
   "engines": {
     "node": ">=20.0.0 <21.0.0"
