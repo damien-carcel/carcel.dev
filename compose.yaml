@@ -1,60 +1,55 @@
 services:
-  devcontainer:
-    build:
-      args:
-        NODE_VERSION: ${NODE_VERSION}
-      context: ./docker/devcontainer
-    command:
-      - sleep
-      - infinity
-    environment:
-      JEST_JUNIT_OUTPUT_DIR: ${JEST_JUNIT_OUTPUT_DIR:-}
-      JEST_JUNIT_OUTPUT_NAME: ${JEST_JUNIT_OUTPUT_NAME:-result.xml}
-      NPM_CONFIG_CACHE: /home/npm
-    user: ${HOST_USER_IDS:-1000:1000}
-    volumes:
-      - type: bind
-        source: .
-        target: /srv/app
-      - type: bind
-        source: ~/.npm
-        target: /home/npm
-    working_dir: /srv/app
-
   dev:
     command:
-      - yarn
+      - npm
+      - run
       - dev
-    image: node:${NODE_VERSION}
+    environment:
+      NPM_CONFIG_CACHE: ${NPM_CONFIG_CACHE:-/home/node/.npm}
+    expose:
+      - 3000
+    image: node:lts-slim
     networks:
       - dev
     ports:
       - 3000:3000
+    tty: true
     user: ${HOST_USER_IDS:-1000:1000}
     volumes:
       - type: bind
         source: .
-        target: /srv/app
-    working_dir: /srv/app
+        target: /app
+      - type: bind
+        source: ~/.npm
+        target: /home/node/.npm
+    working_dir: /app
 
   prod:
     command:
       - /bin/bash
       - -c
       - |
-        yarn build
-        yarn start
-    image: node:${NODE_VERSION}
+        npm run build
+        npm run start
+    environment:
+      NPM_CONFIG_CACHE: ${NPM_CONFIG_CACHE:-/home/node/.npm}
+    expose:
+      - 8000
+    image: node:lts-slim
     networks:
       - prod
     ports:
       - 8000:3000
+    tty: true
     user: ${HOST_USER_IDS:-1000:1000}
     volumes:
       - type: bind
         source: .
-        target: /srv/app
-    working_dir: /srv/app
+        target: /app
+      - type: bind
+        source: ~/.npm
+        target: /home/node/.npm
+    working_dir: /app
 
 networks:
   dev:
