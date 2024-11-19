@@ -32,16 +32,17 @@ export default function Cv() {
             { title: 'Phone', value: { main: '+33 6 20 45 25 55' } },
             { title: 'Email', value: { main: 'damien.carcel@gmail.com' } },
             { title: 'Nationality', value: { main: 'French' } },
-            { title: 'Date of birth', value: { main: 'March 28, 1982 (41 years old)' } },
+            { title: 'Date of birth', value: { main: 'March 28, 1982 (42 years old)' } },
           ]}
         />
         <Section
           title="Experiences"
           subSections={[
+            { title: 'Feb. 2024 - Today', value: { main: 'Senior Software Engineer at Obat' } },
             {
-              title: '2014 - Today',
+              title: 'Dec. 2014 - Jan. 2024',
               value: {
-                main: 'Software Engineer at Akeneo. Including}:',
+                main: 'Software Engineer at Akeneo. Including:',
                 isList: true,
                 sub: [
                   { key: '1', text: 'Lead Software Engineer from January 2020 to June 2023' },
