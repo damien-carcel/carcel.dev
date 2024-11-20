@@ -140,7 +140,7 @@ exports[`renders CV page 1`] = `
               class="subsection_value"
               style="font-weight: normal;"
             >
-              March 28, 1982 (41 years old)
+              March 28, 1982 (42 years old)
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ exports[`renders CV page 1`] = `
           <div
             class="subsection-title"
           >
-            2014 - Today
+            Feb. 2024 - Today
           </div>
           <div
             class="subsection-value"
@@ -168,7 +168,26 @@ exports[`renders CV page 1`] = `
               class="subsection_value"
               style="font-weight: normal;"
             >
-              Software Engineer at Akeneo. Including}:
+              Senior Software Engineer at Obat
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Dec. 2014 - Jan. 2024
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              Software Engineer at Akeneo. Including:
             </div>
             <ul>
               <li>
