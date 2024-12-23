@@ -21,6 +21,18 @@ export const metadata: Metadata = {
  */
 
 export default function Cv() {
+  const birthDate = new Date(1982, 2, 28);
+  const now = new Date();
+  const age = now.getFullYear() - birthDate.getFullYear();
+
+  const birthdateFormat: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
+  const formattedBirthDate = new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
+
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -32,7 +44,7 @@ export default function Cv() {
             { title: 'Phone', value: { main: '+33 6 20 45 25 55' } },
             { title: 'Email', value: { main: 'damien.carcel@gmail.com' } },
             { title: 'Nationality', value: { main: 'French' } },
-            { title: 'Date of birth', value: { main: 'March 28, 1982 (42 years old)' } },
+            { title: 'Date of birth', value: { main: formattedBirthDate + ' (' + age + ' years old)' } },
           ]}
         />
         <Section
