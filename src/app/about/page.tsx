@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const yearsOfXp = (): number => {
+    const started = new Date('2014-09-01');
+    const now = new Date();
+
+    return now.getFullYear() - started.getFullYear();
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -33,11 +40,4 @@ export default function About() {
       </div>
     </div>
   );
-}
-
-function yearsOfXp(): number {
-  const started = new Date('2014-09-01');
-  const now = new Date();
-
-  return now.getFullYear() - started.getFullYear();
 }
