@@ -11,15 +11,6 @@ export const metadata: Metadata = {
   description: 'Here is my curriculum vitæ.',
 };
 
-/**
- * TODO:
- * - Add my photo to the CV
- * - Compute my age instead of hardcoding it
- * - Add phone and email icons right before their values
- * - Check and possibly adapt on mobile
- * - Make the CV printable
- */
-
 export default function Cv() {
   const calculateAge = (birthDate: Date) => {
     const now = new Date();
