@@ -21,17 +21,32 @@ export const metadata: Metadata = {
  */
 
 export default function Cv() {
-  const birthDate = new Date(1982, 2, 28);
-  const now = new Date();
-  const age = now.getFullYear() - birthDate.getFullYear();
+  const calculateAge = (birthDate: Date) => {
+    const now = new Date();
+    let age = now.getFullYear() - birthDate.getFullYear();
+    const monthDiff = now.getMonth() - birthDate.getMonth();
 
-  const birthdateFormat: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+    if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
   };
 
-  const formattedBirthDate = new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
+  const formatBirthDate = (birthDate: Date) => {
+    const birthdateFormat: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
+
+    const formattedBirthDate = new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
+
+    return formattedBirthDate;
+  };
+
+  const birthDate = new Date(1982, 2, 28);
+  const age = calculateAge(birthDate);
 
   return (
     <div className={styles.main}>
@@ -44,7 +59,7 @@ export default function Cv() {
             { title: 'Phone', value: { main: '+33 6 20 45 25 55' } },
             { title: 'Email', value: { main: 'damien.carcel@gmail.com' } },
             { title: 'Nationality', value: { main: 'French' } },
-            { title: 'Date of birth', value: { main: formattedBirthDate + ' (' + age + ' years old)' } },
+            { title: 'Date of birth', value: { main: formatBirthDate(birthDate) + ' (' + age + ' years old)' } },
           ]}
         />
         <Section
