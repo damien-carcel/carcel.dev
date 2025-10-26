@@ -1,4 +1,4 @@
-import ImageLink from '@/components/footer/ImageLink';
+import ImageLink from '@/src/components/footer/ImageLink';
 
 import styles from './style.module.css';
 

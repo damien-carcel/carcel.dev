@@ -1,5 +1,5 @@
-import Copyright from '@/components/footer/Copyright';
-import Links from '@/components/footer/Links';
+import Copyright from '@/src/components/footer/Copyright';
+import Links from '@/src/components/footer/Links';
 
 export default function Footer() {
   return (
