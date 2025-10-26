@@ -12,49 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function Cv() {
-  const calculateAge = (birthDate: Date) => {
-    const now = new Date();
-    let age = now.getFullYear() - birthDate.getFullYear();
-    const monthDiff = now.getMonth() - birthDate.getMonth();
-
-    if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birthDate.getDate())) {
-      age--;
-    }
-
-    return age;
-  };
-
-  const formatBirthDate = (birthDate: Date) => {
-    const birthdateFormat: Intl.DateTimeFormatOptions = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-
-    return new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
-  };
-
-  const birthDate = new Date(1982, 2, 28);
-  const age = calculateAge(birthDate);
-
   return (
     <div className={styles.main}>
       <div className={styles.container}>
         <Identity name="Damien Carcel" profession="Software engineer" />
         <Section
-          title="Contact"
-          subSections={[
-            { title: 'Address', value: { main: '12 rue Pitre de Lisle du Dreneuc, 44200 Nantes, France' } },
-            { title: 'Phone', value: { main: '+33 6 20 45 25 55' } },
-            { title: 'Email', value: { main: 'damien.carcel@gmail.com' } },
-            { title: 'Nationality', value: { main: 'French' } },
-            { title: 'Date of birth', value: { main: formatBirthDate(birthDate) + ' (' + age + ' years old)' } },
-          ]}
-        />
-        <Section
           title="Experiences"
           subSections={[
-            { title: 'Feb. 2024 - Today', value: { main: 'Senior Software Engineer at Obat' } },
+            { title: 'Aug. 2025 - Today', value: { main: 'Senior Software Engineer at Akeneo' } },
+            { title: 'Feb. 2024 - Jul. 2025', value: { main: 'Senior Software Engineer at Obat' } },
             {
               title: 'Dec. 2014 - Jan. 2024',
               value: {
@@ -125,7 +91,7 @@ export default function Cv() {
             {
               title: 'Development tools',
               value: {
-                main: 'JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions',
+                main: 'JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions, Claude Code',
                 important: true,
               },
             },
