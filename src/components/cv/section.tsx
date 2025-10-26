@@ -1,4 +1,4 @@
-import SubSection, { SubSectionProps } from '@/components/cv/subsection';
+import SubSection, { SubSectionProps } from '@/src/components/cv/subsection';
 
 import styles from './style.module.css';
 

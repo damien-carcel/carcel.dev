@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
-import Identity from '@/components/cv/identity';
-import Section from '@/components/cv/section';
+import Annexes from '@/src/components/cv/annexes';
+import Identity from '@/src/components/cv/identity';
+import Section from '@/src/components/cv/section';
 
 import styles from './page.module.css';
-import Annexes from '@/components/cv/annexes';
 
 export const metadata: Metadata = {
   title: "Hello, I'm Damien",
@@ -31,9 +31,7 @@ export default function Cv() {
       day: 'numeric',
     };
 
-    const formattedBirthDate = new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
-
-    return formattedBirthDate;
+    return new Intl.DateTimeFormat('en-US', birthdateFormat).format(birthDate);
   };
 
   const birthDate = new Date(1982, 2, 28);

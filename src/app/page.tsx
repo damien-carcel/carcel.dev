@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
-import Intro from '@/components/home/Intro';
-import Photo from '@/components/home/Photo';
+import Intro from '@/src/components/home/Intro';
+import Photo from '@/src/components/home/Photo';
 
 import styles from './page.module.css';
 
