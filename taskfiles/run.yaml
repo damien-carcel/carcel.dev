@@ -15,6 +15,13 @@ tasks:
       - docker compose up --build --detach --remove-orphans dev
     desc: Run the development server
 
+  prod:
+    aliases:
+      - p
+    cmds:
+      - docker compose up --build --detach --remove-orphans prod
+    desc: Run the production-like server
+
   stop:
     aliases:
       - s
