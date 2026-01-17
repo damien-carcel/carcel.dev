@@ -47,110 +47,6 @@ exports[`renders CV page 1`] = `
         <div
           class="section-title"
         >
-          Contact
-        </div>
-        <div
-          class="subsection"
-        >
-          <div
-            class="subsection-title"
-          >
-            Address
-          </div>
-          <div
-            class="subsection-value"
-          >
-            <div
-              class="subsection_value"
-              style="font-weight: normal;"
-            >
-              12 rue Pitre de Lisle du Dreneuc, 44200 Nantes, France
-            </div>
-          </div>
-        </div>
-        <div
-          class="subsection"
-        >
-          <div
-            class="subsection-title"
-          >
-            Phone
-          </div>
-          <div
-            class="subsection-value"
-          >
-            <div
-              class="subsection_value"
-              style="font-weight: normal;"
-            >
-              +33 6 20 45 25 55
-            </div>
-          </div>
-        </div>
-        <div
-          class="subsection"
-        >
-          <div
-            class="subsection-title"
-          >
-            Email
-          </div>
-          <div
-            class="subsection-value"
-          >
-            <div
-              class="subsection_value"
-              style="font-weight: normal;"
-            >
-              damien.carcel@gmail.com
-            </div>
-          </div>
-        </div>
-        <div
-          class="subsection"
-        >
-          <div
-            class="subsection-title"
-          >
-            Nationality
-          </div>
-          <div
-            class="subsection-value"
-          >
-            <div
-              class="subsection_value"
-              style="font-weight: normal;"
-            >
-              French
-            </div>
-          </div>
-        </div>
-        <div
-          class="subsection"
-        >
-          <div
-            class="subsection-title"
-          >
-            Date of birth
-          </div>
-          <div
-            class="subsection-value"
-          >
-            <div
-              class="subsection_value"
-              style="font-weight: normal;"
-            >
-              March 28, 1982 (43 years old)
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="section"
-      >
-        <div
-          class="section-title"
-        >
           Experiences
         </div>
         <div
@@ -159,7 +55,26 @@ exports[`renders CV page 1`] = `
           <div
             class="subsection-title"
           >
-            Feb. 2024 - Today
+            Aug. 2025 - Today
+          </div>
+          <div
+            class="subsection-value"
+          >
+            <div
+              class="subsection_value"
+              style="font-weight: normal;"
+            >
+              Senior Software Engineer at Akeneo
+            </div>
+          </div>
+        </div>
+        <div
+          class="subsection"
+        >
+          <div
+            class="subsection-title"
+          >
+            Feb. 2024 - Jul. 2025
           </div>
           <div
             class="subsection-value"
@@ -451,7 +366,7 @@ exports[`renders CV page 1`] = `
               class="subsection_value"
               style="font-weight: bold;"
             >
-              JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions
+              JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions, Claude Code
             </div>
           </div>
         </div>
@@ -532,7 +447,7 @@ exports[`renders about page 1`] = `
     >
       <p>
         I am a software engineer with 
-        11
+        12
          years of experience.
       </p>
       <p>
