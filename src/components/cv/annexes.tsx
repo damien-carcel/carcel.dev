@@ -1,4 +1,4 @@
-import Annex, { AnnexProps } from '@/src/components/cv/annex';
+import Annex, { AnnexProps } from '@/components/cv/annex';
 
 import styles from './style.module.css';
 

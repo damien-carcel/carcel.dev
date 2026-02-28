@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 
-import About from '@/src/app/about/page';
-import Home from '@/src/app/page';
-import Cv from '@/src/app/cv/page';
+import About from '@/app/about/page';
+import Home from '@/app/page';
+import Cv from '@/app/cv/page';
 
 it('renders homepage', () => {
   const { container } = render(<Home />);

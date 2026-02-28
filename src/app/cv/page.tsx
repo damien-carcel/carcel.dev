@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
-import Annexes from '@/src/components/cv/annexes';
-import Identity from '@/src/components/cv/identity';
-import Section from '@/src/components/cv/section';
+import Annexes from '@/components/cv/annexes';
+import Identity from '@/components/cv/identity';
+import Section from '@/components/cv/section';
 
 import styles from './page.module.css';
 

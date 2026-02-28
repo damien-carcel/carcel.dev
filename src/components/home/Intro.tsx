@@ -1,4 +1,4 @@
-import styles from '@/src/app/page.module.css';
+import styles from '@/app/page.module.css';
 
 export default function Intro() {
   return (
