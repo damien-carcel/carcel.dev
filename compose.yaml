@@ -1,11 +1,25 @@
+x-common: &common
+  build:
+    args:
+      - DEV_UID=${DEV_UID:-1000}
+      - DEV_GID=${DEV_GID:-1000}
+    context: .
+    dockerfile: docker/Dockerfile
+  volumes:
+    - type: bind
+      source: .
+      target: /app
+    - type: bind
+      source: ~/.cache/pnpm
+      target: /home/node/.cache/pnpm
+    - type: bind
+      source: ~/.local/share/pnpm/store
+      target: /home/node/.local/share/pnpm/store
+  working_dir: /app
+
 services:
   dev:
-    build:
-      args:
-        - DEV_UID=${DEV_UID:-1000}
-        - DEV_GID=${DEV_GID:-1000}
-      context: .
-      dockerfile: docker/Dockerfile
+    <<: *common
     command:
       - npm
       - run
@@ -17,25 +31,9 @@ services:
     ports:
       - 3000:3000
     tty: true
-    volumes:
-      - type: bind
-        source: .
-        target: /app
-      - type: bind
-        source: ~/.cache/pnpm
-        target: /home/node/.cache/pnpm
-      - type: bind
-        source: ~/.local/share/pnpm/store
-        target: /home/node/.local/share/pnpm/store
-    working_dir: /app
 
   prod:
-    build:
-      args:
-        - DEV_UID=${DEV_UID:-1000}
-        - DEV_GID=${DEV_GID:-1000}
-      context: .
-      dockerfile: docker/Dockerfile
+    <<: *common
     command:
       - /bin/bash
       - -c
@@ -48,18 +46,6 @@ services:
       - prod
     ports:
       - 8000:3000
-    tty: true
-    volumes:
-      - type: bind
-        source: .
-        target: /app
-      - type: bind
-        source: ~/.cache/pnpm
-        target: /home/node/.cache/pnpm
-      - type: bind
-        source: ~/.local/share/pnpm/store
-        target: /home/node/.local/share/pnpm/store
-    working_dir: /app
 
 networks:
   dev:
