@@ -54,21 +54,21 @@ tasks:
     aliases:
       - u:r
     cmds:
-      - docker compose run --rm dev pnpm run test:ci {{.CLI_ARGS}}
+      - docker compose run --rm dev pnpm run test {{.CLI_ARGS}}
     desc: Run unit tests
 
   unit:update-snapshots:
     aliases:
       - u:u
     cmds:
-      - docker compose run --rm dev pnpm run test:ci -u
+      - docker compose run --rm dev pnpm run test --updateSnapshot
     desc: Update unit test snapshots
 
   unit:watch:
     aliases:
       - u:w
     cmds:
-      - docker compose run --rm dev pnpm run test
+      - docker compose run --rm dev pnpm run test --watchAll
     desc: Run unit tests in watch mode
 
   all:
