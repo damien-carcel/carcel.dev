@@ -13,13 +13,15 @@ tasks:
       - d
     cmds:
       - docker compose up --build --detach --remove-orphans dev
-    desc: Run the development server
+      - echo "You can access the development server at http://localhost:3000"
+    desc: Run the development server with hot reload
 
   prod:
     aliases:
       - p
     cmds:
       - docker compose up --build --detach --remove-orphans prod
+      - echo "You can access the production-like server at http://localhost:8000"
     desc: Run the production-like server
 
   stop:

@@ -5,21 +5,21 @@ tasks:
     aliases:
       - i
     cmds:
-      - docker compose run --rm dev pnpm install --frozen-lockfile
+      - docker compose run --rm dev bun install --frozen-lockfile
     desc: Install dependencies
 
   update:
     aliases:
       - u
     cmds:
-      - docker compose run --rm dev pnpm update
+      - docker compose run --rm dev bun update
     desc: Updates project dependencies to their latest version
 
   outdated:
     aliases:
       - o
     cmds:
-      - docker compose run --rm dev pnpm outdated
+      - docker compose run --rm dev bun outdated
     desc: Check for outdated project dependencies
     preconditions:
       - sh: test -d node_modules
