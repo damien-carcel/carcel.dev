@@ -21,7 +21,7 @@ services:
   dev:
     <<: *common
     command:
-      - npm
+      - pnpm
       - run
       - dev
     expose:
@@ -37,9 +37,9 @@ services:
     command:
       - /bin/bash
       - -c
-      - |
-        npm run build
-        npm run start
+      - pnpm
+      - run
+      - start
     expose:
       - 8000
     networks:
