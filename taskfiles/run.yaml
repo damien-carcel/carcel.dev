@@ -3,10 +3,17 @@ version: 3
 tasks:
   bash:
     aliases:
-      - b
+      - sh
     cmds:
       - docker compose run --rm --build --remove-orphans dev bash
     desc: Launch a shell in the development container
+
+  build:
+    aliases:
+      - b
+    cmds:
+      - docker compose run --rm dev pnpm run build
+    desc: Run the production-like server
 
   dev:
     aliases:
@@ -21,6 +28,8 @@ tasks:
     cmds:
       - docker compose up --build --detach --remove-orphans prod
     desc: Run the production-like server
+    deps:
+      - build
 
   stop:
     aliases:
