@@ -5,7 +5,7 @@ tasks:
     aliases:
       - sh
     cmds:
-      - docker compose run --rm --build --remove-orphans dev bash
+      - docker compose run --rm --remove-orphans dev bash
     desc: Launch a shell in the development container
 
   build:
@@ -19,14 +19,16 @@ tasks:
     aliases:
       - d
     cmds:
-      - docker compose up --build --detach --remove-orphans dev
+      - docker compose up --detach --remove-orphans dev
+      - echo "Access at http://localhost:5173/"
     desc: Run the development server
 
   prod:
     aliases:
       - p
     cmds:
-      - docker compose up --build --detach --remove-orphans prod
+      - docker compose up --detach --remove-orphans prod
+      - echo "Access at http://localhost:4173/"
     desc: Run the production-like server
     deps:
       - build
