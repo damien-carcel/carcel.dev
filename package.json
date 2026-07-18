@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "prettier '**/*.{js,jsx,mjs,ts,tsx}'",
+    "stylelint": "stylelint '**/*.css'"
   },
   "dependencies": {
     "preact": "^10.29.7",
@@ -15,6 +17,10 @@
     "@preact/preset-vite": "^2.10.5",
     "eslint": "^10.7.0",
     "eslint-config-preact": "^2.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.5",
+    "stylelint": "^17.14.0",
+    "stylelint-config-standard": "^40.0.0",
     "typescript": "^7.0.2",
     "vite": "^8.1.5"
   },
