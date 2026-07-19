@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders the homepage 1`] = `
+<div>
+  <div
+    class="_main_1bd805"
+  >
+    <div
+      class="_intro_08b6f9"
+    >
+      <div
+        class="_hello_08b6f9"
+      >
+        Hello, I'm Damien Carcel.
+      </div>
+      <div
+        class="_about_08b6f9"
+      >
+        I like to craft software.
+      </div>
+    </div>
+    <div
+      class="_photo_08b6f9"
+    >
+      <img
+        alt="me.jpg"
+        height="320"
+        src="/src/assets/me.jpg"
+        width="320"
+      />
+    </div>
+  </div>
+</div>
+`;

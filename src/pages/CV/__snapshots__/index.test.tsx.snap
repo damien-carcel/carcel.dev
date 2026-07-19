@@ -1,0 +1,443 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders the homepage 1`] = `
+<div>
+  <div
+    class="_main_f22cb3"
+  >
+    <div
+      class="_container_f22cb3"
+    >
+      <div
+        class="_identity_b47fd0"
+      >
+        <div
+          class="_identity-value_b47fd0"
+        >
+          <div
+            class="_name_b47fd0"
+          >
+            Damien Carcel
+          </div>
+          <div
+            class="_profession_b47fd0"
+          >
+            Software engineer
+          </div>
+        </div>
+        <div
+          class="_identity-photo_b47fd0"
+        >
+          <img
+            alt="me.jpg"
+            height="160"
+            src="/src/assets/me.jpg"
+            width="160"
+          />
+        </div>
+      </div>
+      <div
+        class="_section_b47fd0"
+      >
+        <div
+          class="_section-title_b47fd0"
+        >
+          Experiences
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Aug. 2025 - Today
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: normal;"
+            >
+              Senior Software Engineer at Akeneo
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Feb. 2024 - Jul. 2025
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: normal;"
+            >
+              Senior Software Engineer at Obat
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Dec. 2014 - Jan. 2024
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: normal;"
+            >
+              Software Engineer at Akeneo. Including:
+            </div>
+            <ul>
+              <li>
+                Lead Software Engineer from January 2020 to June 2023
+              </li>
+              <li>
+                Senior Software Engineer since July 2023
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            2010 - 2013
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: normal;"
+            >
+              Earth-Sciences contractual teacher in middle and high school
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            2008
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: normal;"
+            >
+              Earth-Sciences contractual teacher at ISARA Lyon engineering school
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="_section_b47fd0"
+      >
+        <div
+          class="_section-title_b47fd0"
+        >
+          Education
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            2009
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              PHD in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            2006
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              Master in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            2004
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              License in Earth Sciences
+            </div>
+            <div>
+              <div>
+                Claude Bernard Lyon 1 University, Lyon, France
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_section_b47fd0"
+      >
+        <div
+          class="_section-title_b47fd0"
+        >
+          Languages
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Mother tongue
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              French
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Foreign languages
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              English
+            </div>
+            <div>
+              <div>
+                Good command of both written and spoken language
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_section_b47fd0"
+      >
+        <div
+          class="_section-title_b47fd0"
+        >
+          Professional skills
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Development languages
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              PHP, Symfony, Go, JavaScript, TypeScript, React
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Development Practices
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              TDD, DDD, CI/CD
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Databases
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              MySQL, PostgreSQL, Elasticsearch
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Development tools
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions, Claude Code
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="_subsection_b47fd0"
+        >
+          <div
+            class="_subsection-title_b47fd0"
+          >
+            Operating systems
+          </div>
+          <div
+            class="_subsection-value_b47fd0"
+          >
+            <div
+              class="_subsection_value_b47fd0"
+              style="font-weight: bold;"
+            >
+              GNU/Linux, Windows, macOS
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="_annexes_b47fd0"
+      >
+        <div
+          class="_annex_b47fd0"
+        >
+          <div
+            class="_section-title_b47fd0"
+          >
+            Professional highlights
+          </div>
+          <div
+            class="_annex-content_b47fd0"
+          >
+            <p>
+              I enjoy coaching and bringing new knowledge when I can while learning new things from new people.
+            </p>
+            <p>
+              My main thrill is trying to understand what are users problems and to bring solutions to those.
+            </p>
+          </div>
+        </div>
+        <div
+          class="_annex_b47fd0"
+        >
+          <div
+            class="_section-title_b47fd0"
+          >
+            Other skills and hobbies
+          </div>
+          <div
+            class="_annex-content_b47fd0"
+          >
+            <p>
+              Reading (mainly fantasy, science fiction and manga)
+            </p>
+            <p>
+              Fishing
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

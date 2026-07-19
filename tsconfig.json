@@ -16,5 +16,5 @@
     }
   },
   "exclude": ["dist", "node_modules"],
-  "include": ["node_modules/vite/client.d.ts", "**/*"]
+  "include": ["node_modules/vite/client.d.ts", "node_modules/vitest/index.d.ts", "**/*"]
 }
