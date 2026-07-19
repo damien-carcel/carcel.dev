@@ -1,4 +1,4 @@
-import styles from './style.module.css';
+import style from './style.module.css';
 
 export type AnnexProps = {
   title: string;
@@ -7,9 +7,9 @@ export type AnnexProps = {
 
 export default function Annex(props: AnnexProps) {
   return (
-    <div className={styles.annex}>
-      <div className={styles['section-title']}>{props.title}</div>
-      <div className={styles['annex-content']}>
+    <div className={style.annex}>
+      <div className={style['section-title']}>{props.title}</div>
+      <div className={style['annex-content']}>
         {props.content.map((paragraph) => (
           <p key={paragraph.key}>{paragraph.text}</p>
         ))}

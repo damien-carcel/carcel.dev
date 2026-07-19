@@ -24,28 +24,28 @@ services:
       - pnpm
       - run
       - dev
+      - "--host"
     expose:
-      - 3000
+      - 5173
     networks:
       - dev
     ports:
-      - 3000:3000
+      - 5173:5173
     tty: true
 
   prod:
     <<: *common
     command:
-      - /bin/bash
-      - -c
       - pnpm
       - run
-      - start
+      - preview
+      - "--host"
     expose:
-      - 8000
+      - 4173
     networks:
       - prod
     ports:
-      - 8000:3000
+      - 4173:4173
 
 networks:
   dev:

@@ -52,10 +52,7 @@ jobs:
           command: task tests:static:types:check
       - run:
           name: Run unit tests
-          environment:
-            JEST_JUNIT_OUTPUT_DIR: test_results
-            JEST_JUNIT_OUTPUT_NAME: unit.xml
-          command: task tests:unit:run -- --reporters=default --reporters=jest-junit
+          command: task tests:unit -- --reporter=default --reporter=junit --outputFile=./test_results/unit.xml
       - store_artifacts:
           path: test_results
       - store_test_results:

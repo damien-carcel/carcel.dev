@@ -1,6 +1,6 @@
-import Annex, { AnnexProps } from '@/components/cv/annex';
+import Annex, { AnnexProps } from './annex';
 
-import styles from './style.module.css';
+import style from './style.module.css';
 
 type AnnexesProps = {
   annexes: AnnexProps[];
@@ -8,7 +8,7 @@ type AnnexesProps = {
 
 export default function Annexes(props: AnnexesProps) {
   return (
-    <div className={styles.annexes}>
+    <div className={style.annexes}>
       {props.annexes.map((annex) => (
         <Annex key={annex.title} title={annex.title} content={annex.content} />
       ))}

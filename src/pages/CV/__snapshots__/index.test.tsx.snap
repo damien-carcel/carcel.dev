@@ -1,105 +1,102 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`renders CV page 1`] = `
+exports[`renders the homepage 1`] = `
 <div>
   <div
-    class="main"
+    class="_main_f22cb3"
   >
     <div
-      class="container"
+      class="_container_f22cb3"
     >
       <div
-        class="identity"
+        class="_identity_b47fd0"
       >
         <div
-          class="identity-value"
+          class="_identity-value_b47fd0"
         >
           <div
-            class="name"
+            class="_name_b47fd0"
           >
             Damien Carcel
           </div>
           <div
-            class="profession"
+            class="_profession_b47fd0"
           >
             Software engineer
           </div>
         </div>
         <div
-          class="identity-photo"
+          class="_identity-photo_b47fd0"
         >
           <img
             alt="me.jpg"
-            data-nimg="1"
-            decoding="async"
             height="160"
-            loading="lazy"
-            src="/_next/image?url=%2Fme.jpg&w=384&q=75"
-            srcset="/_next/image?url=%2Fme.jpg&w=256&q=75 1x, /_next/image?url=%2Fme.jpg&w=384&q=75 2x"
-            style="color: transparent;"
+            src="/src/assets/me.jpg"
             width="160"
           />
         </div>
       </div>
       <div
-        class="section"
+        class="_section_b47fd0"
       >
         <div
-          class="section-title"
+          class="_section-title_b47fd0"
         >
           Experiences
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Aug. 2025 - Today
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: normal;"
             >
               Senior Software Engineer at Akeneo
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Feb. 2024 - Jul. 2025
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: normal;"
             >
               Senior Software Engineer at Obat
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Dec. 2014 - Jan. 2024
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: normal;"
             >
               Software Engineer at Akeneo. Including:
@@ -115,65 +112,67 @@ exports[`renders CV page 1`] = `
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             2010 - 2013
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: normal;"
             >
               Earth-Sciences contractual teacher in middle and high school
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             2008
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: normal;"
             >
               Earth-Sciences contractual teacher at ISARA Lyon engineering school
             </div>
+            
           </div>
         </div>
       </div>
       <div
-        class="section"
+        class="_section_b47fd0"
       >
         <div
-          class="section-title"
+          class="_section-title_b47fd0"
         >
           Education
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             2009
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               PHD in Earth Sciences
@@ -186,18 +185,18 @@ exports[`renders CV page 1`] = `
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             2006
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               Master in Earth Sciences
@@ -210,18 +209,18 @@ exports[`renders CV page 1`] = `
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             2004
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               License in Earth Sciences
@@ -235,45 +234,46 @@ exports[`renders CV page 1`] = `
         </div>
       </div>
       <div
-        class="section"
+        class="_section_b47fd0"
       >
         <div
-          class="section-title"
+          class="_section-title_b47fd0"
         >
           Languages
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Mother tongue
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               French
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Foreign languages
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               English
@@ -287,122 +287,127 @@ exports[`renders CV page 1`] = `
         </div>
       </div>
       <div
-        class="section"
+        class="_section_b47fd0"
       >
         <div
-          class="section-title"
+          class="_section-title_b47fd0"
         >
           Professional skills
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Development languages
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               PHP, Symfony, Go, JavaScript, TypeScript, React
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Development Practices
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               TDD, DDD, CI/CD
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Databases
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               MySQL, PostgreSQL, Elasticsearch
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Development tools
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               JetBrains IDEs, VS Code, Git, Docker, Kubernetes, Terraform, CircleCI, GitHub Actions, Claude Code
             </div>
+            
           </div>
         </div>
         <div
-          class="subsection"
+          class="_subsection_b47fd0"
         >
           <div
-            class="subsection-title"
+            class="_subsection-title_b47fd0"
           >
             Operating systems
           </div>
           <div
-            class="subsection-value"
+            class="_subsection-value_b47fd0"
           >
             <div
-              class="subsection_value"
+              class="_subsection_value_b47fd0"
               style="font-weight: bold;"
             >
               GNU/Linux, Windows, macOS
             </div>
+            
           </div>
         </div>
       </div>
       <div
-        class="annexes"
+        class="_annexes_b47fd0"
       >
         <div
-          class="annex"
+          class="_annex_b47fd0"
         >
           <div
-            class="section-title"
+            class="_section-title_b47fd0"
           >
             Professional highlights
           </div>
           <div
-            class="annex-content"
+            class="_annex-content_b47fd0"
           >
             <p>
               I enjoy coaching and bringing new knowledge when I can while learning new things from new people.
@@ -413,15 +418,15 @@ exports[`renders CV page 1`] = `
           </div>
         </div>
         <div
-          class="annex"
+          class="_annex_b47fd0"
         >
           <div
-            class="section-title"
+            class="_section-title_b47fd0"
           >
             Other skills and hobbies
           </div>
           <div
-            class="annex-content"
+            class="_annex-content_b47fd0"
           >
             <p>
               Reading (mainly fantasy, science fiction and manga)
@@ -432,74 +437,6 @@ exports[`renders CV page 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders about page 1`] = `
-<div>
-  <div
-    class="main"
-  >
-    <div
-      class="container"
-    >
-      <p>
-        I am a software engineer with 
-        12
-         years of experience.
-      </p>
-      <p>
-        But before that, I have been passionate about free and open-source software for decades. A passion that has accompanied me throughout my studies and professional career, as well as in my spare time.
-      </p>
-      <p>
-        I have an atypical background. First an Earth Sciences scientist, I obtained a PhD degree in 2009. After that, I taught Earth Sciences in middle and high-school for a few years. Then, in 2013, I eventually decided to learn how to be a software engineer by myself, and did not regret that move ever since.
-      </p>
-      <p>
-        I kept from my academic years a taste for knowledge sharing. I like to mentor my pairs anytime I can, and always look to learn new things and improve myself.
-      </p>
-      <p>
-        I do also especially value practices such as TDD, pair and mob programming, code reviews. I consider that working as a team, and not as a simple group of individual and isolated contributors, the best way to achieve quality software.
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders homepage 1`] = `
-<div>
-  <div
-    class="main"
-  >
-    <div
-      class="intro"
-    >
-      <div
-        class="hello"
-      >
-        Hello, I'm Damien Carcel.
-      </div>
-      <div
-        class="about"
-      >
-        I like to craft software.
-      </div>
-    </div>
-    <div
-      class="photo"
-    >
-      <img
-        alt="me.jpg"
-        data-nimg="1"
-        decoding="async"
-        height="320"
-        loading="lazy"
-        src="/_next/image?url=%2Fme.jpg&w=640&q=75"
-        srcset="/_next/image?url=%2Fme.jpg&w=384&q=75 1x, /_next/image?url=%2Fme.jpg&w=640&q=75 2x"
-        style="color: transparent;"
-        width="320"
-      />
     </div>
   </div>
 </div>

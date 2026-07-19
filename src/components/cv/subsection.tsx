@@ -1,4 +1,4 @@
-import styles from './style.module.css';
+import style from './style.module.css';
 
 export type SubSectionProps = {
   title: string;
@@ -8,10 +8,10 @@ export type SubSectionProps = {
 
 export default function SubSection(props: SubSectionProps) {
   return (
-    <div className={styles.subsection}>
-      <div className={styles['subsection-title']}>{props.title}</div>
-      <div className={styles['subsection-value']}>
-        <div style={{ fontWeight: props.value.important ? 'bold' : 'normal' }} className={styles.subsection_value}>
+    <div className={style.subsection}>
+      <div className={style['subsection-title']}>{props.title}</div>
+      <div className={style['subsection-value']}>
+        <div style={{ fontWeight: props.value.important ? 'bold' : 'normal' }} className={style.subsection_value}>
           {props.value.main}
         </div>
         {props.value.sub ? (

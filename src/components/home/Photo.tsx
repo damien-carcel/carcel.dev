@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import photo from '../../assets/me.jpg';
 
-import styles from '@/app/page.module.css';
+import style from './style.module.css';
 
 export default function Photo() {
   return (
-    <div className={styles.photo}>
-      <Image alt="me.jpg" src="/me.jpg" height={320} width={320} />
+    <div className={style.photo}>
+      <img alt="me.jpg" src={photo} height="320" width="320" />
     </div>
   );
 }

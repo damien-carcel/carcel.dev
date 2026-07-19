@@ -1,0 +1,14 @@
+.main {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: space-evenly;
+}
+
+@media (width <= 1023px) {
+	.main {
+		flex-direction: column-reverse;
+		justify-content: center;
+		text-align: center;
+	}
+}

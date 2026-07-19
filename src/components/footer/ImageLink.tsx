@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 type ImageLinkProps = {
   alt: string;
   href: string;
@@ -10,8 +7,8 @@ type ImageLinkProps = {
 
 export default function ImageLink(props: ImageLinkProps) {
   return (
-    <Link href={props.href} target={props.target}>
-      <Image alt={props.alt} src={props.src} height={32} width={32} />
-    </Link>
+    <a href={props.href} target={props.target}>
+      <img alt={props.alt} src={props.src} height={32} width={32} />
+    </a>
   );
 }

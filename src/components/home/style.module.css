@@ -1,0 +1,31 @@
+.about {
+    font-size: x-large;
+}
+
+.intro {
+    color: darkslategray;
+}
+
+.intro > div {
+    padding: 5px 0;
+}
+
+.hello {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.photo > img {
+    border-radius: 50%;
+}
+
+@media (width <= 1023px) {
+    .intro {
+        margin-top: 50px;
+    }
+
+    .photo > img {
+        height: 256px;
+        width: 256px;
+    }
+}

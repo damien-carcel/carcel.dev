@@ -1,20 +1,13 @@
-import { Metadata } from 'next';
+import Annexes from '../../components/cv/annexes';
+import Identity from '../../components/cv/identity';
+import Section from '../../components/cv/section';
 
-import Annexes from '@/components/cv/annexes';
-import Identity from '@/components/cv/identity';
-import Section from '@/components/cv/section';
-
-import styles from './page.module.css';
-
-export const metadata: Metadata = {
-  title: "Hello, I'm Damien",
-  description: 'Here is my curriculum vitæ.',
-};
+import style from './style.module.css';
 
 export default function Cv() {
   return (
-    <div className={styles.main}>
-      <div className={styles.container}>
+    <div className={style.main}>
+      <div className={style.container}>
         <Identity name="Damien Carcel" profession="Software engineer" />
         <Section
           title="Experiences"

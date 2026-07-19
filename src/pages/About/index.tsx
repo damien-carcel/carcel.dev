@@ -1,11 +1,4 @@
-import { Metadata } from 'next';
-
-import styles from './page.module.css';
-
-export const metadata: Metadata = {
-  title: "Hello, I'm Damien",
-  description: "Let's talk about me :).",
-};
+import style from './style.module.css';
 
 export default function About() {
   const yearsOfXp = (): number => {
@@ -16,8 +9,8 @@ export default function About() {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.container}>
+    <div className={style.main}>
+      <div className={style.container}>
         <p>I am a software engineer with {yearsOfXp()} years of experience.</p>
         <p>
           But before that, I have been passionate about free and open-source software for decades. A passion that has

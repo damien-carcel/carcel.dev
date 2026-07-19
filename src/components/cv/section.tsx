@@ -1,6 +1,6 @@
-import SubSection, { SubSectionProps } from '@/components/cv/subsection';
+import SubSection, { SubSectionProps } from './subsection';
 
-import styles from './style.module.css';
+import style from './style.module.css';
 
 type SectionProps = {
   title: string;
@@ -9,8 +9,8 @@ type SectionProps = {
 
 export default function Section(props: SectionProps) {
   return (
-    <div className={styles.section}>
-      <div className={styles['section-title']}>{props.title}</div>
+    <div className={style.section}>
+      <div className={style['section-title']}>{props.title}</div>
       {props.subSections.map((subsection) => (
         <SubSection key={subsection.title} title={subsection.title} value={subsection.value} />
       ))}

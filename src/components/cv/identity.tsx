@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import styles from './style.module.css';
+import photo from '../../assets/me.jpg';
+
+import style from './style.module.css';
 
 type IdentityProps = {
   name: string;
@@ -8,13 +9,13 @@ type IdentityProps = {
 
 export default function Identity(props: IdentityProps) {
   return (
-    <div className={styles.identity}>
-      <div className={styles['identity-value']}>
-        <div className={styles.name}>{props.name}</div>
-        <div className={styles.profession}>{props.profession}</div>
+    <div className={style.identity}>
+      <div className={style['identity-value']}>
+        <div className={style.name}>{props.name}</div>
+        <div className={style.profession}>{props.profession}</div>
       </div>
-      <div className={styles['identity-photo']}>
-        <Image alt="me.jpg" src="/me.jpg" height={160} width={160} />
+      <div className={style['identity-photo']}>
+        <img alt="me.jpg" src={photo} height="160" width="160" />
       </div>
     </div>
   );

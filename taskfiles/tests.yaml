@@ -50,25 +50,25 @@ tasks:
       - docker compose run --rm dev pnpm run typecheck
     desc: Check the code typing
 
-  unit:run:
+  unit:
     aliases:
       - u:r
     cmds:
-      - docker compose run --rm dev pnpm run test {{.CLI_ARGS}}
+      - docker compose run --rm dev pnpm run test --run {{.CLI_ARGS}}
     desc: Run unit tests
 
-  unit:update-snapshots:
+  unit:update:
     aliases:
       - u:u
     cmds:
-      - docker compose run --rm dev pnpm run test --updateSnapshot
+      - docker compose run --rm dev pnpm run test --update
     desc: Update unit test snapshots
 
   unit:watch:
     aliases:
       - u:w
     cmds:
-      - docker compose run --rm dev pnpm run test --watchAll
+      - docker compose run --rm dev pnpm run test --watch
     desc: Run unit tests in watch mode
 
   all:
@@ -104,7 +104,7 @@ tasks:
       - echo "|      Run unit tests       |"
       - echo "|---------------------------|"
       - echo ""
-      - task: unit:run
+      - task: unit
       - echo ""
       - echo "|---------------------------|"
       - echo "|   All tests successful    |"
