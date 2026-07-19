@@ -1,70 +1,63 @@
-:root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
 
-	color: #222;
-	background-color: #ffffff;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+html {
+    background-color: lightgray;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
 }
 
 body {
-	margin: 0;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arimo, sans-serif;
+    font-style: normal;
+    margin: 0 auto;
+    min-height: 100%;
 }
 
-#app {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+nav {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: flex-end;
 }
 
-header {
-	display: flex;
-	justify-content: flex-end;
-	background-color: #673ab8;
+footer {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
 }
 
-header nav {
-	display: flex;
+nav a {
+    float: left;
+    color: darkgrey;
+    padding: 18px 25px;
+    text-align: center;
+    text-decoration: none;
 }
 
-header a {
-	color: #fff;
-	padding: 0.75rem;
-	text-decoration: none;
+footer a {
+    text-decoration: none;
 }
 
-header a.active {
-	background-color: #0005;
+nav a:hover {
+    background-color: #e6e6e6;
 }
 
-header a:hover {
-	background-color: #0008;
+nav a.active {
+    color: dimgrey;
 }
 
-main {
-	flex: auto;
-	display: flex;
-	align-items: center;
-	max-width: 1280px;
-	margin: 0 auto;
-	text-align: center;
-}
+@media (width <= 1023px) {
+    nav a {
+        padding: 10px;
+    }
 
-@media (max-width: 639px) {
-	main {
-		margin: 2rem;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		color: #ccc;
-		background-color: #1a1a1a;
-	}
+    footer {
+        padding: 10px;
+    }
 }

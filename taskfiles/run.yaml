@@ -19,7 +19,7 @@ tasks:
     aliases:
       - d
     cmds:
-      - docker compose up --detach --remove-orphans dev
+      - docker compose up --detach --force-recreate --remove-orphans dev
       - echo "Access at http://localhost:5173/"
     desc: Run the development server
 
@@ -27,7 +27,7 @@ tasks:
     aliases:
       - p
     cmds:
-      - docker compose up --detach --remove-orphans prod
+      - docker compose up --detach --force-recreate --remove-orphans prod
       - echo "Access at http://localhost:4173/"
     desc: Run the production-like server
     deps:
@@ -37,5 +37,5 @@ tasks:
     aliases:
       - s
     cmds:
-      - docker compose down -v --remove-orphans
+      - docker compose down --remove-orphans --volumes
     desc: Stop and remove the presentation containers

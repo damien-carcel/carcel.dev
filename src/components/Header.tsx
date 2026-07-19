@@ -1,16 +1,19 @@
 import { useLocation } from 'preact-iso';
 
-export function Header() {
+export default function Header() {
   const { url } = useLocation();
 
   return (
     <header>
       <nav>
-        <a href="/public" class={url == '/' && 'active'}>
+        <a href="/" className={(url == '/' && 'active') || ''}>
           Home
         </a>
-        <a href="/404" class={url == '/404' && 'active'}>
-          404
+        <a href="/about" className={(url == '/about' && 'active') || ''}>
+          About Me
+        </a>
+        <a href="/cv" className={(url == '/cv' && 'active') || ''}>
+          CV
         </a>
       </nav>
     </header>

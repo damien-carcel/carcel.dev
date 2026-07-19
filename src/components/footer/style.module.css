@@ -1,0 +1,16 @@
+.copyright {
+  font-size: medium;
+  color: dimgray;
+}
+
+.links img {
+  padding: 0 10px;
+}
+
+@media (width <= 1023px) {
+  .links img {
+    padding: 0 2px;
+    height: 24px;
+    width: 24px;
+  }
+}
