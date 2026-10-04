@@ -1,4 +1,4 @@
-import SubSection, { SubSectionProps } from './subsection';
+import SubSection, { type SubSectionProps } from './subsection';
 
 import style from './style.module.css';
 

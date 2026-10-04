@@ -12,7 +12,7 @@ tasks:
     aliases:
       - b
     cmds:
-      - docker compose run --rm dev pnpm run build
+      - docker compose run --rm dev bun run build
     desc: Run the production-like server
 
   dev:

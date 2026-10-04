@@ -8,20 +8,17 @@ x-common: &common
   volumes:
     - type: bind
       source: .
-      target: /app
+      target: /home/bun/app
     - type: bind
-      source: ~/.cache/pnpm
-      target: /home/node/.cache/pnpm
-    - type: bind
-      source: ~/.local/share/pnpm/store
-      target: /home/node/.local/share/pnpm/store
-  working_dir: /app
+      source: ~/.bun
+      target: /home/bun/.bun
+  working_dir: /home/bun/app
 
 services:
   dev:
     <<: *common
     command:
-      - pnpm
+      - bun
       - run
       - dev
       - "--host"
@@ -36,7 +33,7 @@ services:
   prod:
     <<: *common
     command:
-      - pnpm
+      - bun
       - run
       - preview
       - "--host"

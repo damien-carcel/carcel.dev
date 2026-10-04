@@ -1,13 +1,9 @@
-FROM node:26-slim
+FROM oven/bun:slim
 
 ARG DEV_UID
 ARG DEV_GID
 
-RUN groupmod --gid $DEV_GID node && \
-    usermod --uid $DEV_UID --gid $DEV_GID node
+RUN groupmod --gid $DEV_GID bun && \
+    usermod --uid $DEV_UID --gid $DEV_GID bun
 
-RUN npm install -g pnpm@latest-11
-
-USER node:node
-
-RUN pnpm config set store-dir /home/node/.local/share/pnpm/store
+USER bun:bun

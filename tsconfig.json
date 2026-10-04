@@ -6,6 +6,7 @@
     "noEmit": true,
     "allowJs": true,
     "checkJs": true,
+
     /* Preact Config */
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
@@ -16,5 +17,5 @@
     }
   },
   "exclude": ["dist", "node_modules"],
-  "include": ["node_modules/vite/client.d.ts", "node_modules/vitest/index.d.ts", "**/*"]
+  "include": ["node_modules/vite/client.d.ts", "**/*"]
 }
