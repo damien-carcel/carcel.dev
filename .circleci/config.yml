@@ -1,27 +1,14 @@
 version: 2.1
 
-workflows:
-  pull_request:
-    jobs:
-      - tests:
-          context:
-            - docker-hub-credentials
-          filters:
-            branches:
-              ignore:
-                - main
+orbs:
+  node: circleci/node@7.2.1
 
 jobs:
   tests:
-    machine:
-      image: ubuntu-2604:2026.05.1
+    executor: node/default
     steps:
       - checkout
-      - set_host_user_ids_environment_variable
-      - run:
-          name: Setup cache directory
-          command: |
-            mkdir -p ~/.bun
+      - node/install-bun
       - run:
           name: Install the latest Task binary
           command: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/bin
@@ -57,12 +44,11 @@ jobs:
       - store_test_results:
           path: test_results
 
-commands:
-  set_host_user_ids_environment_variable:
-    description: "Set Docker Compose DEV_UID and DEV_GID environment variables according to the host virtual machine"
-    steps:
-      - run:
-          name: Set Docker Compose DEV_UID and DEV_GID environment variables according to the host virtual machine
-          command: |
-            echo 'export DEV_UID="$(id -u)"' >> $BASH_ENV
-            echo 'export DEV_GID="$(id -g)"' >> $BASH_ENV
+workflows:
+  pull_request:
+    jobs:
+      - tests:
+          filters:
+            branches:
+              ignore:
+                - main

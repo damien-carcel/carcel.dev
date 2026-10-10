@@ -1,41 +1,25 @@
 version: 3
 
 tasks:
-  bash:
-    aliases:
-      - sh
-    cmds:
-      - docker compose run --rm --remove-orphans dev bash
-    desc: Launch a shell in the development container
-
   build:
     aliases:
       - b
     cmds:
-      - docker compose run --rm dev bun run build
+      - bun run build
     desc: Run the production-like server
 
   dev:
     aliases:
       - d
     cmds:
-      - docker compose up --detach --force-recreate --remove-orphans dev
-      - echo "Access at http://localhost:5173/"
+      - bun run dev
     desc: Run the development server
 
   prod:
     aliases:
       - p
     cmds:
-      - docker compose up --detach --force-recreate --remove-orphans prod
-      - echo "Access at http://localhost:4173/"
+      - bun run preview
     desc: Run the production-like server
     deps:
       - build
-
-  stop:
-    aliases:
-      - s
-    cmds:
-      - docker compose down --remove-orphans --volumes
-    desc: Stop and remove the presentation containers
