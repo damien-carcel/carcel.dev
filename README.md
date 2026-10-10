@@ -2,9 +2,8 @@
 
 ## Requirements
 
-- Docker
-- Docker Compose v2
-- Task
+- [Bun](https://bun.com/)
+- [Task](https://taskfile.dev/)
 
 ## How to use it?
 

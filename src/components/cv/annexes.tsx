@@ -1,4 +1,4 @@
-import Annex, { AnnexProps } from './annex';
+import Annex, { type AnnexProps } from './annex';
 
 import style from './style.module.css';
 

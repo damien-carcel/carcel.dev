@@ -18,7 +18,7 @@ const config = defineConfig({
 
 const tstConfig = testConfig({
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
   },
 });
 
