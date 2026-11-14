@@ -5,70 +5,70 @@ tasks:
     aliases:
       - f:c
     cmds:
-      - bun run prettier --check
+      - bun run --bun prettier --check
     desc: Check the code style
 
   static:format:fix:
     aliases:
       - f:f
     cmds:
-      - bun run prettier --write
+      - bun run --bun prettier --write
     desc: Fix the code style
 
   static:style-sheet:lint:
     aliases:
       - s:l
     cmds:
-      - bun run stylelint
+      - bun run --bun stylelint
     desc: Lint the style sheets
 
   static:style-sheet:fix:
     aliases:
       - s:f
     cmds:
-      - bun run stylelint --fix
+      - bun run --bun stylelint --fix
     desc: Fix the style sheets
 
   static:code:lint:
     aliases:
       - c:l
     cmds:
-      - bun run lint {{.CLI_ARGS}}
+      - bun run --bun lint {{.CLI_ARGS}}
     desc: Lint the application code
 
   static:code:fix:
     aliases:
       - c:f
     cmds:
-      - bun run lint --fix
+      - bun run --bun lint --fix
     desc: Fix the application code
 
   static:types:check:
     aliases:
       - t:c
     cmds:
-      - bun run typecheck
+      - bun run --bun typecheck
     desc: Check the code typing
 
   unit:
     aliases:
       - u:r
     cmds:
-      - bun run test --run {{.CLI_ARGS}}
+      - bun run --bun test --run {{.CLI_ARGS}}
     desc: Run unit tests
 
   unit:update:
     aliases:
       - u:u
     cmds:
-      - bun run test --update
+      - bun run --bun test --update
     desc: Update unit test snapshots
 
   unit:watch:
     aliases:
       - u:w
     cmds:
-      - bun run test --watch
+      - bun run --bun test --watch
     desc: Run unit tests in watch mode
 
   all:
