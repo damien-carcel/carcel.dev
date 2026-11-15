@@ -1,9 +1,10 @@
 version: "3"
 
 tasks:
-  static:format:check:
+  static:format:
     aliases:
-      - f:c
+      - f
+      - s:f
     cmds:
       - bun run --bun prettier --check
     desc: Check the code style
@@ -11,48 +12,54 @@ tasks:
   static:format:fix:
     aliases:
       - f:f
+      - s:f:f
     cmds:
       - bun run --bun prettier --write
     desc: Fix the code style
 
-  static:style-sheet:lint:
+  static:stylelint:
     aliases:
-      - s:l
+      - sl
+      - s:sl
     cmds:
       - bun run --bun stylelint
     desc: Lint the style sheets
 
-  static:style-sheet:fix:
+  static:stylelint:fix:
     aliases:
-      - s:f
+      - sl:f
+      - s:sl:f
     cmds:
       - bun run --bun stylelint --fix
     desc: Fix the style sheets
 
-  static:code:lint:
+  static:lint:
     aliases:
-      - c:l
+      - l
+      - s:l
     cmds:
       - bun run --bun lint {{.CLI_ARGS}}
     desc: Lint the application code
 
-  static:code:fix:
+  static:lint:fix:
     aliases:
-      - c:f
+      - l:f
+      - s:l:f
     cmds:
       - bun run --bun lint --fix
     desc: Fix the application code
 
-  static:types:check:
+  static:types:
     aliases:
-      - t:c
+      - t
+      - s:t
     cmds:
       - bun run --bun typecheck
     desc: Check the code typing
 
   unit:
     aliases:
-      - u:r
+      - u
     cmds:
       - bun run --bun test --run {{.CLI_ARGS}}
     desc: Run unit tests
@@ -80,25 +87,25 @@ tasks:
       - echo "| Check the code formatting |"
       - echo "|---------------------------|"
       - echo ""
-      - task: static:format:check
+      - task: static:format
       - echo ""
       - echo "|---------------------------|"
       - echo "|   Lint the style sheets   |"
       - echo "|---------------------------|"
       - echo ""
-      - task: static:style-sheet:lint
+      - task: static:stylelint
       - echo ""
       - echo "|---------------------------|"
       - echo "| Lint the application code |"
       - echo "|---------------------------|"
       - echo ""
-      - task: static:code:lint
+      - task: static:lint
       - echo ""
       - echo "|---------------------------|"
       - echo "|   Check the code typing   |"
       - echo "|---------------------------|"
       - echo ""
-      - task: static:types:check
+      - task: static:types
       - echo ""
       - echo "|---------------------------|"
       - echo "|      Run unit tests       |"

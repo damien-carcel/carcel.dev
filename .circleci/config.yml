@@ -26,16 +26,16 @@ jobs:
             - ./.next/cache
       - run:
           name: Check the code style
-          command: task tests:static:format:check
+          command: task tests:static:format
       - run:
           name: Lint the stylesheets
-          command: task tests:static:style-sheet:lint
+          command: task tests:static:stylelint
       - run:
           name: Lint the application code
-          command: task tests:static:code:lint -- --format junit -o test_results/eslint.xml
+          command: task tests:static:lint -- --format junit -o test_results/eslint.xml
       - run:
           name: Check the code typing
-          command: task tests:static:types:check
+          command: task tests:static:types
       - run:
           name: Run unit tests
           command: task tests:unit -- --reporter=default --reporter=junit --outputFile=./test_results/unit.xml
