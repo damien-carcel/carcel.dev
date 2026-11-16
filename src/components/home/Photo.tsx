@@ -1,5 +1,4 @@
 import photo from '../../assets/me.jpg';
-
 import style from './style.module.css';
 
 export default function Photo() {

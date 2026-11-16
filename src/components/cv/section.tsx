@@ -1,6 +1,5 @@
-import SubSection, { type SubSectionProps } from './subsection';
-
 import style from './style.module.css';
+import SubSection, { type SubSectionProps } from './subsection';
 
 type SectionProps = {
   title: string;

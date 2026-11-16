@@ -1,6 +1,6 @@
-import { defineConfig as testConfig } from 'vitest/config';
-import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
+import { defineConfig } from 'vite';
+import { defineConfig as testConfig } from 'vitest/config';
 
 const config = defineConfig({
   plugins: [
