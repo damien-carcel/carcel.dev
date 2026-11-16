@@ -1,5 +1,5 @@
-import { expect, it } from 'vitest';
 import { render } from '@testing-library/preact';
+import { expect, it } from 'vitest';
 
 import About from './index';
 

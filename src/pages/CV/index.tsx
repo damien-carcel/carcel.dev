@@ -1,7 +1,6 @@
 import Annexes from '../../components/cv/annexes';
 import Identity from '../../components/cv/identity';
 import Section from '../../components/cv/section';
-
 import style from './style.module.css';
 
 export default function Cv() {

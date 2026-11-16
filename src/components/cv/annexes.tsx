@@ -1,5 +1,4 @@
 import Annex, { type AnnexProps } from './annex';
-
 import style from './style.module.css';
 
 type AnnexesProps = {
